@@ -2,6 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="1_aifk4"]
 [ext_resource type="Texture2D" uid="uid://dd5sghsm6fvvs" path="res://textures/Grafika_bez_nazwy (19).png" id="1_iks0y"]
+[ext_resource type="Texture2D" uid="uid://cmtnb8xfntfa7" path="res://textures/Grafika_bez_nazwy (20).png" id="3_ygeob"]
+[ext_resource type="Texture2D" uid="uid://dvvyhilvnlct4" path="res://textures/JP2-foto.png" id="4_co8of"]
+[ext_resource type="Texture2D" uid="uid://d0y26oy6g3ju3" path="res://textures/Grafika_bez_nazwy (23).png" id="5_ennqm"]
+[ext_resource type="Script" uid="uid://jum77nw82eay" path="res://scenes/kremówka.gd" id="6_hvm52"]
 
 [node name="market" type="Node2D" unique_id=1301290233]
 
@@ -20,7 +24,22 @@ enableCamera = false
 canWalk = false
 
 [node name="ProductItemList" type="ItemList" parent="." unique_id=1796295707]
+visible = false
 offset_left = 13.0
 offset_top = -195.0
 offset_right = 402.0
 offset_bottom = 382.29858
+item_count = 1
+fixed_icon_size = Vector2i(200, 200)
+item_0/icon = ExtResource("3_ygeob")
+
+[node name="JP2" type="Sprite2D" parent="." unique_id=1545746837]
+position = Vector2(73.99999, 180)
+scale = Vector2(1.4103051, 1.4103053)
+texture = ExtResource("4_co8of")
+
+[node name="Kremówka" type="Sprite2D" parent="JP2" unique_id=1441593015]
+position = Vector2(-6.381592, -192.86606)
+scale = Vector2(0.15649316, 0.15649314)
+texture = ExtResource("5_ennqm")
+script = ExtResource("6_hvm52")
