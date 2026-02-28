@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnj1j2lvwgnkw"]
 
-[ext_resource type="Script" uid="uid://dk7dg87blqm0g" path="res://character_body_2d.gd" id="1_ij6vw"]
-[ext_resource type="Texture2D" uid="uid://c7k3wkaxp0tco" path="res://Grafika_bez_nazwy (1).png" id="2_ij6vw"]
+[ext_resource type="Script" uid="uid://dk7dg87blqm0g" path="res://scripts/player.gd" id="1_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://c7k3wkaxp0tco" path="res://textures/Grafika_bez_nazwy (1).png" id="2_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://c0xtswq8nu4eg" path="res://clothes/top/top1.png" id="3_1kp85"]
 [ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_qnedo"]
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_wyqjk"]
@@ -16,7 +16,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems")]
+[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems")]
 script = ExtResource("1_ij6vw")
 topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8")]
 bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]

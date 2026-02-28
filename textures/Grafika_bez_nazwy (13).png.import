@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbqp8k1l7uc5a"
-path="res://.godot/imported/Grafika_bez_nazwy (4).png-fcc29ccd497729e8d3484efad8db289f.ctex"
+uid="uid://bgunb5b1u55ah"
+path="res://.godot/imported/Grafika_bez_nazwy (13).png-ea0c9bb9baceaa03cbf1b10f0f5e1901.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Grafika_bez_nazwy (4).png"
-dest_files=["res://.godot/imported/Grafika_bez_nazwy (4).png-fcc29ccd497729e8d3484efad8db289f.ctex"]
+source_file="res://textures/Grafika_bez_nazwy (13).png"
+dest_files=["res://.godot/imported/Grafika_bez_nazwy (13).png-ea0c9bb9baceaa03cbf1b10f0f5e1901.ctex"]
 
 [params]
 

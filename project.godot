@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="Worm Up"
-run/main_scene="uid://dnj1j2lvwgnkw"
+run/main_scene="uid://dd72ukp6a8efi"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://textures/icon.svg"
 
 [autoload]
 

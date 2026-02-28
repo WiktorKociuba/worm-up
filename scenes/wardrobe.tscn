@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://dpros3yya5ijw"]
 
-[ext_resource type="Script" uid="uid://bhw7dyep1xih2" path="res://chooseClothes.gd" id="2_g2r1m"]
-[ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://character_body_2d.tscn" id="2_kft4c"]
+[ext_resource type="Script" uid="uid://bhw7dyep1xih2" path="res://scripts/chooseClothes.gd" id="2_g2r1m"]
+[ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="2_kft4c"]
 [ext_resource type="Texture2D" uid="uid://c0xtswq8nu4eg" path="res://clothes/top/top1.png" id="3_3uy7g"]
 [ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="3_rr0sa"]
 [ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_rr0sa"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="4_sp7kv"]
-[ext_resource type="Texture2D" uid="uid://dekihuefd86y8" path="res://Grafika_bez_nazwy (16).png" id="4_xgcoa"]
+[ext_resource type="Texture2D" uid="uid://dekihuefd86y8" path="res://textures/Grafika_bez_nazwy (16).png" id="4_xgcoa"]
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_sp7kv"]
 [ext_resource type="Texture2D" uid="uid://c3obqmkej71ka" path="res://clothes/top/top4.png" id="6_b1k6g"]
 [ext_resource type="Texture2D" uid="uid://di7hdbk5n00se" path="res://clothes/top/top5.png" id="7_uq810"]
 [ext_resource type="Texture2D" uid="uid://c8owsf4oeii1r" path="res://clothes/top/top6.png" id="8_xgcoa"]
 [ext_resource type="Texture2D" uid="uid://b68xcblln4ool" path="res://clothes/top/top7.png" id="9_veeku"]
 [ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_c1gm6"]
-[ext_resource type="Texture2D" uid="uid://lwiyow43owf5" path="res://Grafika_bez_nazwy (8).png" id="13_sp7kv"]
+[ext_resource type="Texture2D" uid="uid://lwiyow43owf5" path="res://textures/Grafika_bez_nazwy (8).png" id="13_sp7kv"]
 
 [node name="wardrobe" type="Node2D" unique_id=1271117142]
 script = ExtResource("2_g2r1m")
