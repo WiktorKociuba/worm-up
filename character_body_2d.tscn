@@ -2,20 +2,90 @@
 
 [ext_resource type="Script" uid="uid://dk7dg87blqm0g" path="res://character_body_2d.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://c7k3wkaxp0tco" path="res://Grafika_bez_nazwy (1).png" id="2_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://c0xtswq8nu4eg" path="res://clothes/top/top1.png" id="3_1kp85"]
+[ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_qnedo"]
+[ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_wyqjk"]
+[ext_resource type="Texture2D" uid="uid://c3obqmkej71ka" path="res://clothes/top/top4.png" id="6_k85er"]
+[ext_resource type="Texture2D" uid="uid://di7hdbk5n00se" path="res://clothes/top/top5.png" id="7_ebjds"]
+[ext_resource type="Texture2D" uid="uid://c8owsf4oeii1r" path="res://clothes/top/top6.png" id="8_y1dt5"]
+[ext_resource type="Texture2D" uid="uid://b68xcblln4ool" path="res://clothes/top/top7.png" id="9_au0nh"]
+[ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_76bt2"]
+[ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="11_wyqjk"]
+[ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="12_k85er"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=239766747]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems")]
 script = ExtResource("1_ij6vw")
+topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8")]
+bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944375968]
-position = Vector2(19.5, 42)
+position = Vector2(-4, -16)
 shape = SubResource("RectangleShape2D_44cfe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=641262355]
-position = Vector2(4.0000153, 6)
+position = Vector2(-18, -43)
 scale = Vector2(0.20609759, 0.20609759)
 texture = ExtResource("2_ij6vw")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=677570470]
+
+[node name="headItems" type="Node2D" parent="." unique_id=2064575868]
+
+[node name="neckItems" type="Node2D" parent="." unique_id=1168495543]
+
+[node name="topItems" type="Node2D" parent="." unique_id=980187481]
+
+[node name="top1" type="Sprite2D" parent="topItems" unique_id=160149955]
+position = Vector2(-9, -45)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("3_1kp85")
+
+[node name="Top2" type="Sprite2D" parent="topItems" unique_id=883640062]
+position = Vector2(-4, -48)
+scale = Vector2(0.27373737, 0.27373737)
+texture = ExtResource("4_qnedo")
+
+[node name="Top3" type="Sprite2D" parent="topItems" unique_id=1060241047]
+position = Vector2(-8, 13)
+scale = Vector2(0.4919355, 0.4919355)
+texture = ExtResource("5_wyqjk")
+
+[node name="Top4" type="Sprite2D" parent="topItems" unique_id=958861017]
+position = Vector2(-1.9999847, -49.000046)
+scale = Vector2(0.292, 0.292)
+texture = ExtResource("6_k85er")
+
+[node name="Top5" type="Sprite2D" parent="topItems" unique_id=1798537993]
+position = Vector2(0, -48.999985)
+scale = Vector2(0.2572383, 0.25723833)
+texture = ExtResource("7_ebjds")
+
+[node name="Top6" type="Sprite2D" parent="topItems" unique_id=1103321040]
+position = Vector2(1, -45.000004)
+scale = Vector2(0.2905, 0.2905)
+texture = ExtResource("8_y1dt5")
+
+[node name="Top7" type="Sprite2D" parent="topItems" unique_id=875530952]
+position = Vector2(2.9999971, -56)
+scale = Vector2(0.35080644, 0.35080647)
+texture = ExtResource("9_au0nh")
+
+[node name="Top8" type="Sprite2D" parent="topItems" unique_id=1767738197]
+position = Vector2(-1, -39)
+scale = Vector2(0.30700004, 0.30700004)
+texture = ExtResource("10_76bt2")
+
+[node name="bottomItems" type="Node2D" parent="." unique_id=202959923]
+
+[node name="Bottom1" type="Sprite2D" parent="bottomItems" unique_id=1807511814]
+position = Vector2(-4, 80.000015)
+scale = Vector2(0.36143187, 0.3614319)
+texture = ExtResource("11_wyqjk")
+
+[node name="Bottom2" type="Sprite2D" parent="bottomItems" unique_id=55168874]
+position = Vector2(-1.9999924, 54)
+scale = Vector2(0.22199999, 0.22199999)
+texture = ExtResource("12_k85er")

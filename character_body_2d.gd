@@ -1,13 +1,40 @@
 extends CharacterBody2D
 
+@export var headItems: Array[Sprite2D] = []
+@export var neckItems: Array[Sprite2D] = []
+@export var topItems: Array[Sprite2D] = []
+@export var bottomItems: Array[Sprite2D] = []
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
+func _ready() -> void:
+    setupClothes()
+    Clothes.clothesChanged.connect(setupClothes)
+
+func setupClothes() -> void:
+    for item in headItems:
+        if item != null:
+            item.visible = false
+    for item in neckItems:
+        if item != null:
+            item.visible = false
+    for item in topItems:
+        if item != null:
+            item.visible = false
+    for item in bottomItems:
+        if item != null:
+            item.visible = false
+    if headItems.size() > Clothes.head:
+        headItems[Clothes.head].visible = true
+    if neckItems.size() > Clothes.neck:
+        neckItems[Clothes.neck].visible = true
+    if topItems.size() > Clothes.top:
+        topItems[Clothes.top].visible = true
+    if bottomItems.size() > Clothes.bottom:
+        print(Clothes.bottom)
+        bottomItems[Clothes.bottom].visible = true
 
 func _physics_process(delta: float) -> void:
-    # Get the input direction and handle the movement/deceleration.
-    # As good practice, you should replace UI actions with custom gameplay actions.
     var direction := Input.get_axis("left", "right")
     if direction:
         velocity.x = direction * SPEED

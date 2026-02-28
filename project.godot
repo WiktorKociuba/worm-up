@@ -15,6 +15,10 @@ run/main_scene="uid://dnj1j2lvwgnkw"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Clothes="*uid://b2nmnxr87tmas"
+
 [input]
 
 left={
