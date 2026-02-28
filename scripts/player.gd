@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 @export var headItems: Array[Sprite2D] = []
 @export var neckItems: Array[Sprite2D] = []
