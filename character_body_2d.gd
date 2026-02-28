@@ -5,7 +5,8 @@ extends CharacterBody2D
 @export var topItems: Array[Sprite2D] = []
 @export var bottomItems: Array[Sprite2D] = []
 
-const SPEED = 300.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
     setupClothes()
@@ -46,4 +47,4 @@ func _physics_process(delta: float) -> void:
     else:
         velocity.y = move_toward(velocity.y, 0, SPEED)
 
-    move_and_slide()
+	move_and_slide()
