@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://d0y26oy6g3ju3" path="res://textures/Grafika_bez_nazwy (23).png" id="5_ennqm"]
 [ext_resource type="Script" uid="uid://jum77nw82eay" path="res://scenes/kremówka.gd" id="6_hvm52"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygeob"]
+size = Vector2(182.23007, 173.01218)
+
 [node name="market" type="Node2D" unique_id=1301290233]
 
 [node name="GrafikaBezNazwy(19)" type="Sprite2D" parent="." unique_id=395194501]
@@ -38,8 +41,16 @@ position = Vector2(73.99999, 180)
 scale = Vector2(1.4103051, 1.4103053)
 texture = ExtResource("4_co8of")
 
-[node name="Kremówka" type="Sprite2D" parent="JP2" unique_id=1441593015]
+[node name="Area2D" type="Area2D" parent="JP2" unique_id=1181200313]
 position = Vector2(-6.381592, -192.86606)
-scale = Vector2(0.15649316, 0.15649314)
+
+[node name="Kremówka" type="Sprite2D" parent="JP2/Area2D" unique_id=1441593015]
+scale = Vector2(0.15649316, 0.15649313)
 texture = ExtResource("5_ennqm")
 script = ExtResource("6_hvm52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JP2/Area2D" unique_id=931534642]
+position = Vector2(14.535843, -14.181313)
+shape = SubResource("RectangleShape2D_ygeob")
+
+[connection signal="input_event" from="JP2/Area2D" to="JP2/Area2D/Kremówka" method="_on_area_2d_input_event"]
