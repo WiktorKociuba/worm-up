@@ -6,36 +6,37 @@
 [ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="3_rr0sa"]
 [ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_rr0sa"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="4_sp7kv"]
+[ext_resource type="Texture2D" uid="uid://dekihuefd86y8" path="res://Grafika_bez_nazwy (16).png" id="4_xgcoa"]
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_sp7kv"]
 [ext_resource type="Texture2D" uid="uid://c3obqmkej71ka" path="res://clothes/top/top4.png" id="6_b1k6g"]
 [ext_resource type="Texture2D" uid="uid://di7hdbk5n00se" path="res://clothes/top/top5.png" id="7_uq810"]
 [ext_resource type="Texture2D" uid="uid://c8owsf4oeii1r" path="res://clothes/top/top6.png" id="8_xgcoa"]
 [ext_resource type="Texture2D" uid="uid://b68xcblln4ool" path="res://clothes/top/top7.png" id="9_veeku"]
 [ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_c1gm6"]
+[ext_resource type="Texture2D" uid="uid://lwiyow43owf5" path="res://Grafika_bez_nazwy (8).png" id="13_sp7kv"]
 
 [node name="wardrobe" type="Node2D" unique_id=1271117142]
 script = ExtResource("2_g2r1m")
 
-[node name="CharacterBody2D" parent="." unique_id=239766747 instance=ExtResource("2_kft4c")]
-position = Vector2(-6, -82)
+[node name="GrafikaBezNazwy(8)" type="Sprite2D" parent="." unique_id=972759321]
+position = Vector2(-26, -134)
+scale = Vector2(0.9085751, 0.73612803)
+texture = ExtResource("13_sp7kv")
 
-[node name="ChooseClothesType" type="ItemList" parent="CharacterBody2D" unique_id=255274559]
-offset_left = 222.0
-offset_top = -186.0
-offset_right = 448.0
-offset_bottom = -146.0
-item_count = 4
-max_columns = 4
-item_0/text = "Head"
-item_1/text = "Neck"
-item_2/text = "Top"
-item_3/text = "Bottom"
+[node name="GrafikaBezNazwy(16)" type="Sprite2D" parent="." unique_id=2057902067]
+position = Vector2(357.99997, -11.499996)
+scale = Vector2(0.32324216, 0.2680664)
+texture = ExtResource("4_xgcoa")
+
+[node name="CharacterBody2D" parent="." unique_id=239766747 instance=ExtResource("2_kft4c")]
+position = Vector2(-22, -59)
 
 [node name="BottomItemList" type="ItemList" parent="." unique_id=1510440075]
-offset_left = 216.0
-offset_top = -228.0
-offset_right = 442.0
-offset_bottom = 93.0
+visible = false
+offset_left = 230.00003
+offset_top = -188.0
+offset_right = 456.00003
+offset_bottom = 133.0
 item_count = 2
 max_columns = 2
 fixed_icon_size = Vector2i(100, 100)
@@ -43,11 +44,10 @@ item_0/icon = ExtResource("3_rr0sa")
 item_1/icon = ExtResource("4_sp7kv")
 
 [node name="TopItemList" type="ItemList" parent="." unique_id=440612935]
-visible = false
-offset_left = 216.0
-offset_top = -228.0
-offset_right = 442.0
-offset_bottom = 93.0
+offset_left = 230.0
+offset_top = -188.0
+offset_right = 456.0
+offset_bottom = 133.0
 item_count = 8
 max_columns = 3
 fixed_icon_size = Vector2i(100, 100)
@@ -62,20 +62,32 @@ item_7/icon = ExtResource("10_c1gm6")
 
 [node name="NeckItemList" type="ItemList" parent="." unique_id=1188148195]
 visible = false
-offset_left = 216.0
-offset_top = -228.0
-offset_right = 442.0
-offset_bottom = 93.0
+offset_left = 230.0
+offset_top = -188.0
+offset_right = 456.0
+offset_bottom = 133.0
 
 [node name="HeadItemList" type="ItemList" parent="." unique_id=1826214435]
 visible = false
-offset_left = 216.0
-offset_top = -228.0
-offset_right = 442.0
-offset_bottom = 93.0
+offset_left = 230.0
+offset_top = -188.0
+offset_right = 456.0
+offset_bottom = 133.0
 
-[connection signal="item_clicked" from="CharacterBody2D/ChooseClothesType" to="." method="_on_choose_clothes_type_item_clicked"]
+[node name="ChooseClothesType" type="ItemList" parent="." unique_id=255274559]
+offset_left = 230.00003
+offset_top = -228.0
+offset_right = 456.00003
+offset_bottom = -188.0
+item_count = 4
+max_columns = 4
+item_0/text = "Head"
+item_1/text = "Neck"
+item_2/text = "Top"
+item_3/text = "Bottom"
+
 [connection signal="item_clicked" from="BottomItemList" to="." method="_on_bottom_item_list_item_clicked"]
 [connection signal="item_clicked" from="TopItemList" to="." method="_on_top_item_list_item_clicked"]
 [connection signal="item_clicked" from="NeckItemList" to="." method="_on_neck_item_list_item_clicked"]
 [connection signal="item_clicked" from="HeadItemList" to="." method="_on_head_item_list_item_clicked"]
+[connection signal="item_clicked" from="ChooseClothesType" to="." method="_on_choose_clothes_type_item_clicked"]
