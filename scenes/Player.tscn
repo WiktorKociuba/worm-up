@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dk7dg87blqm0g" path="res://scripts/player.gd" id="1_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://c7k3wkaxp0tco" path="res://textures/Grafika_bez_nazwy (1).png" id="2_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://de2418r1d6ii8" path="res://textures/Grafika_bez_nazwy (25).png" id="2_lkdrv"]
 [ext_resource type="Texture2D" uid="uid://c0xtswq8nu4eg" path="res://clothes/top/top1.png" id="3_1kp85"]
 [ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_qnedo"]
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_wyqjk"]
@@ -25,7 +26,13 @@ bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]
 position = Vector2(-4, -16)
 shape = SubResource("RectangleShape2D_44cfe")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=641262355]
+[node name="żółty" type="Sprite2D" parent="." unique_id=1448279660]
+visible = false
+position = Vector2(-18, -43)
+scale = Vector2(0.20609759, 0.20609759)
+texture = ExtResource("2_lkdrv")
+
+[node name="normalny" type="Sprite2D" parent="." unique_id=641262355]
 position = Vector2(-18, -43)
 scale = Vector2(0.20609759, 0.20609759)
 texture = ExtResource("2_ij6vw")

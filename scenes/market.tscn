@@ -4,8 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dd5sghsm6fvvs" path="res://textures/Grafika_bez_nazwy (19).png" id="1_iks0y"]
 [ext_resource type="Texture2D" uid="uid://cmtnb8xfntfa7" path="res://textures/Grafika_bez_nazwy (20).png" id="3_ygeob"]
 [ext_resource type="Texture2D" uid="uid://dvvyhilvnlct4" path="res://textures/JP2-foto.png" id="4_co8of"]
+[ext_resource type="Script" uid="uid://cks6rj2qlfhun" path="res://scenes/product_item_list.gd" id="5_co8of"]
 [ext_resource type="Texture2D" uid="uid://d0y26oy6g3ju3" path="res://textures/Grafika_bez_nazwy (23).png" id="5_ennqm"]
 [ext_resource type="Script" uid="uid://jum77nw82eay" path="res://scenes/kremówka.gd" id="6_hvm52"]
+[ext_resource type="AudioStream" uid="uid://cmu40153ckfkd" path="res://music/barkaKremówka.ogg" id="8_ennqm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygeob"]
 size = Vector2(182.23007, 173.01218)
@@ -27,19 +29,23 @@ enableCamera = false
 canWalk = false
 
 [node name="ProductItemList" type="ItemList" parent="." unique_id=1796295707]
-visible = false
 offset_left = 13.0
 offset_top = -195.0
-offset_right = 402.0
+offset_right = 434.0
 offset_bottom = 382.29858
-item_count = 1
+item_count = 2
+max_columns = 2
 fixed_icon_size = Vector2i(200, 200)
 item_0/icon = ExtResource("3_ygeob")
+item_1/icon = ExtResource("5_ennqm")
+script = ExtResource("5_co8of")
 
 [node name="JP2" type="Sprite2D" parent="." unique_id=1545746837]
+visible = false
 position = Vector2(73.99999, 180)
 scale = Vector2(1.4103051, 1.4103053)
 texture = ExtResource("4_co8of")
+script = ExtResource("6_hvm52")
 
 [node name="Area2D" type="Area2D" parent="JP2" unique_id=1181200313]
 position = Vector2(-6.381592, -192.86606)
@@ -47,10 +53,23 @@ position = Vector2(-6.381592, -192.86606)
 [node name="Kremówka" type="Sprite2D" parent="JP2/Area2D" unique_id=1441593015]
 scale = Vector2(0.15649316, 0.15649313)
 texture = ExtResource("5_ennqm")
-script = ExtResource("6_hvm52")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JP2/Area2D" unique_id=931534642]
 position = Vector2(14.535843, -14.181313)
 shape = SubResource("RectangleShape2D_ygeob")
 
-[connection signal="input_event" from="JP2/Area2D" to="JP2/Area2D/Kremówka" method="_on_area_2d_input_event"]
+[node name="Label" type="Label" parent="JP2" unique_id=1884705456]
+offset_left = -68.779434
+offset_top = -321.20706
+offset_right = 82.220566
+offset_bottom = -298.20706
+text = "Click on kremówka!"
+
+[node name="Timer" type="Timer" parent="JP2" unique_id=878172533]
+
+[node name="barka" type="AudioStreamPlayer" parent="JP2" unique_id=1542608524]
+stream = ExtResource("8_ennqm")
+
+[connection signal="item_clicked" from="ProductItemList" to="ProductItemList" method="_on_item_clicked"]
+[connection signal="input_event" from="JP2/Area2D" to="JP2" method="_on_area_2d_input_event"]
+[connection signal="timeout" from="JP2/Timer" to="JP2" method="_on_timer_timeout"]
