@@ -2,9 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bnk7o3q7du1n0" path="res://textures/groundtxt.png" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://dyjmp745wfe83" path="res://scenes/lumpeks.gd" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxxeoe4cfrtql" path="res://scenes/grzyb.tscn" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://cfbfm5h7hnl3h" path="res://scenes/Grafika_bez_nazwy (9).png" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cmvf8ej04qu51" path="res://scripts/Grafika_bez_nazwy (6).png" id="5_tefeu"]
+[ext_resource type="Script" uid="uid://ddn6i75f71fps" path="res://scenes/sklep.gd" id="5_tipki"]
 [ext_resource type="Texture2D" uid="uid://n3bbj2g65am8" path="res://textures/Grafika_bez_nazwy (17).png" id="6_o6xl0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
@@ -118,6 +120,12 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_0xm2m")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
+size = Vector2(424, 278.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85g3d"]
+size = Vector2(710, 558)
+
 [node name="Node2D" type="Node2D" unique_id=1763072945]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=96486534]
@@ -126,11 +134,18 @@ tile_map_data = PackedByteArray("AAAEAP3/AQABAAAAAAAEAP7/AQABAAAAAAADAP7/AQABAAA
 tile_set = SubResource("TileSet_1bvp3")
 
 [node name="lumpeks" type="Node2D" parent="." unique_id=1344305879]
+script = ExtResource("2_o6xl0")
 
 [node name="Sprite2D" type="Sprite2D" parent="lumpeks" unique_id=1765198591]
 position = Vector2(5064, 1574)
 scale = Vector2(0.38649136, 0.38649136)
 texture = ExtResource("4_jyhfs")
+
+[node name="Area2D" type="Area2D" parent="lumpeks" unique_id=293913697]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lumpeks/Area2D" unique_id=1353311796]
+position = Vector2(5011, 1576.75)
+shape = SubResource("RectangleShape2D_tipki")
 
 [node name="fryzjer" type="Node2D" parent="." unique_id=258099504]
 
@@ -140,11 +155,18 @@ scale = Vector2(0.344307, 0.344307)
 texture = ExtResource("5_tefeu")
 
 [node name="sklep" type="Node2D" parent="." unique_id=1792984490]
+script = ExtResource("5_tipki")
 
 [node name="Sprite2D" type="Sprite2D" parent="sklep" unique_id=1084215519]
 position = Vector2(3553, -2678)
 scale = Vector2(0.6040112, 0.6040112)
 texture = ExtResource("6_o6xl0")
+
+[node name="Area2D" type="Area2D" parent="sklep" unique_id=2069577910]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sklep/Area2D" unique_id=1916170172]
+position = Vector2(3492, -2703)
+shape = SubResource("RectangleShape2D_85g3d")
 
 [node name="Player" parent="." unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems") instance=ExtResource("1_0xm2m")]
 position = Vector2(100, 154)
@@ -152,4 +174,7 @@ topItems = []
 bottomItems = []
 
 [node name="grzyb2" parent="." unique_id=688304257 instance=ExtResource("3_sugp2")]
-position = Vector2(899, 966)
+position = Vector2(-5314, -4690)
+
+[connection signal="body_entered" from="lumpeks/Area2D" to="lumpeks" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="sklep/Area2D" to="sklep" method="_on_area_2d_body_entered"]
