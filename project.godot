@@ -18,8 +18,8 @@ config/icon="res://textures/icon.svg"
 [autoload]
 
 Clothes="*uid://b2nmnxr87tmas"
-EventController="*uid://c8grbw80p2sxx"
 GameController="*uid://dm2bqibd1y0s7"
+EventController="*res://event_controller.gd"
 
 [display]
 
