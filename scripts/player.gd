@@ -57,12 +57,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-    if ifŻółty:
-        $"żółty".visible = true
-        $normalny.visible = false
-    else:
-        $"żółty".visible = false
-        $normalny.visible = true
+	if ifŻółty:
+		$"żółty".visible = true
+		$normalny.visible = false
+	else:
+		$"żółty".visible = false
+		$normalny.visible = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
