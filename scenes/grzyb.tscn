@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://s01w6lfx416f"]
+
+[ext_resource type="Script" uid="uid://3c5g6vxw74o1" path="res://grzyb.gd" id="1_7njqe"]
+[ext_resource type="Texture2D" uid="uid://gdxwsof0emxy" path="res://Grafika_bez_nazwy (12).png" id="2_gq8b0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(321, 802)
+
+[node name="grzyb" type="Node2D" unique_id=688304257]
+script = ExtResource("1_7njqe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=817229416]
+texture = ExtResource("2_gq8b0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=907859397]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1451761269]
+position = Vector2(-1022.5, 126)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
