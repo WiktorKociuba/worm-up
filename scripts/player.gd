@@ -4,12 +4,16 @@ extends CharacterBody2D
 @export var neckItems: Array[Sprite2D] = []
 @export var topItems: Array[Sprite2D] = []
 @export var bottomItems: Array[Sprite2D] = []
+@export var enableCamera: bool = true
+@export var canWalk: bool = true
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
     setupClothes()
+    if not enableCamera:
+        $Camera2D.visible = false
     Clothes.clothesChanged.connect(setupClothes)
 
 func setupClothes() -> void:
@@ -36,6 +40,8 @@ func setupClothes() -> void:
         bottomItems[Clothes.bottom].visible = true
 
 func _physics_process(delta: float) -> void:
+    if not canWalk:
+        return
     var direction := Input.get_axis("left", "right")
     if direction:
         velocity.x = direction * SPEED

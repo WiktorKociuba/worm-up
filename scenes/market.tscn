@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://bar2kbjaiyg13"]
 
+[ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="1_aifk4"]
+[ext_resource type="Texture2D" uid="uid://dd5sghsm6fvvs" path="res://textures/Grafika_bez_nazwy (19).png" id="1_iks0y"]
+
 [node name="market" type="Node2D" unique_id=1301290233]
+
+[node name="GrafikaBezNazwy(19)" type="Sprite2D" parent="." unique_id=395194501]
+position = Vector2(-14.000004, -38)
+scale = Vector2(0.8364328, 0.8364329)
+texture = ExtResource("1_iks0y")
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1340023756]
+position = Vector2(-18, 45)
+
+[node name="Player" parent="." unique_id=239766747 instance=ExtResource("1_aifk4")]
+position = Vector2(-335.00003, 247)
+scale = Vector2(1.7200012, 1.7200012)
+enableCamera = false
+canWalk = false
+
+[node name="ProductItemList" type="ItemList" parent="." unique_id=1796295707]
+offset_left = 13.0
+offset_top = -195.0
+offset_right = 402.0
+offset_bottom = 382.29858

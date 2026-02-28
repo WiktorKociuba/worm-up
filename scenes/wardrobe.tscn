@@ -28,8 +28,13 @@ position = Vector2(357.99997, -11.499996)
 scale = Vector2(0.32324216, 0.2680664)
 texture = ExtResource("4_xgcoa")
 
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=342410436]
+position = Vector2(-62, -118)
+
 [node name="CharacterBody2D" parent="." unique_id=239766747 instance=ExtResource("2_kft4c")]
-position = Vector2(-22, -59)
+position = Vector2(-171, 121)
+enableCamera = false
+canWalk = false
 
 [node name="BottomItemList" type="ItemList" parent="." unique_id=1510440075]
 visible = false
