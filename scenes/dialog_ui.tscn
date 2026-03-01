@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bdybdqdqrs4gq"]
+
+[ext_resource type="Texture2D" uid="uid://5w0cv6rw8ggn" path="res://textures/playerIcon.png" id="1_edwrk"]
+[ext_resource type="Texture2D" uid="uid://cxcsmun5ph46j" path="res://textures/wizardHead.png" id="2_avaca"]
+[ext_resource type="Texture2D" uid="uid://cf57qwv0hd142" path="res://textures/dialogBox.png" id="3_8nsh5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkdrv"]
+size = Vector2(939, 211)
+
+[node name="DialogUI" type="Control" unique_id=336836978]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Icons" type="Control" parent="." unique_id=405650105]
+anchors_preset = 0
+offset_left = -230.0
+offset_top = 214.0
+offset_right = -190.0
+offset_bottom = 254.0
+
+[node name="playerIcon" type="TextureRect" parent="Icons" unique_id=863964662]
+visible = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 98.0
+offset_bottom = 97.0
+texture = ExtResource("1_edwrk")
+expand_mode = 1
+
+[node name="wizardIcon" type="TextureRect" parent="Icons" unique_id=1930925689]
+visible = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 98.0
+offset_bottom = 97.0
+texture = ExtResource("2_avaca")
+expand_mode = 1
+
+[node name="DialogBox" type="TextureRect" parent="." unique_id=710694130]
+layout_mode = 0
+offset_left = -230.0
+offset_top = 214.0
+offset_right = 231.0
+offset_bottom = 447.0
+texture = ExtResource("3_8nsh5")
+stretch_mode = 4
+
+[node name="DialogText" type="Label" parent="DialogBox" unique_id=1929061087]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 32.0
+offset_right = 439.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "dsadasdas"
+
+[node name="dialogArea2D" type="Area2D" parent="DialogBox" unique_id=1387192425]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogBox/dialogArea2D" unique_id=1435950789]
+visible = false
+position = Vector2(459.5, 95.5)
+shape = SubResource("RectangleShape2D_lkdrv")
+
+[node name="TextureRect" type="TextureRect" parent="DialogBox" unique_id=266414886]
+layout_mode = 0
+offset_left = 856.0
+offset_top = 19.0
+offset_right = 896.0
+offset_bottom = 59.0

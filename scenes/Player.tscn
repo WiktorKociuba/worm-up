@@ -13,14 +13,16 @@
 [ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_76bt2"]
 [ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="11_wyqjk"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="12_k85er"]
+[ext_resource type="PackedScene" uid="uid://bdybdqdqrs4gq" path="res://scenes/dialog_ui.tscn" id="14_p7iby"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
 
-[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems")]
+[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems", "npcIcons")]
 script = ExtResource("1_ij6vw")
 topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8")]
 bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]
+npcIcons = [NodePath(""), NodePath("")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944375968]
 position = Vector2(-4, -16)
@@ -96,3 +98,12 @@ texture = ExtResource("11_wyqjk")
 position = Vector2(-1.9999924, 54)
 scale = Vector2(0.22199999, 0.22199999)
 texture = ExtResource("12_k85er")
+
+[node name="UI" type="Control" parent="." unique_id=1508684006]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogUI" parent="UI" unique_id=336836978 instance=ExtResource("14_p7iby")]
+layout_mode = 0
