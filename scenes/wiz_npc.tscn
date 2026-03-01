@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b4kdq8x3hlckv"]
+[gd_scene format=3 uid="uid://f2flsruve0yq"]
 
-[ext_resource type="Script" uid="uid://dj2ml0hpdslc0" path="res://scripts/wizard_npc.gd" id="1_1wk7e"]
-[ext_resource type="Texture2D" uid="uid://db85h2nvjjvsq" path="res://textures/Grafika_bez_nazwy (28).png" id="2_a4yl1"]
+[ext_resource type="Script" uid="uid://dj2ml0hpdslc0" path="res://scripts/wizard_npc.gd" id="1_pce8r"]
+[ext_resource type="Texture2D" uid="uid://db85h2nvjjvsq" path="res://textures/Grafika_bez_nazwy (28).png" id="2_6vcpw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nku13"]
 size = Vector2(218, 483)
@@ -10,14 +10,14 @@ size = Vector2(218, 483)
 size = Vector2(111, 393)
 
 [node name="wizardNPC" type="CharacterBody2D" unique_id=241741361]
-script = ExtResource("1_1wk7e")
+script = ExtResource("1_pce8r")
 dialogs = Array[String](["Erm. I have a problem. Would you be willing to help, you young soul?", "Of course!", "I need a special mushroom for an... erm. Anyway, it glows with blue light and is about your height.", "*whispering* Make sure that you don't get lost...", "Erm, I'm sure you'll find it with no effort.", "Alright..."])
 dialogsWho = Array[int]([1, 0, 1, 1, 1, 0])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548199253]
 position = Vector2(4.5776367e-05, 0)
 scale = Vector2(0.204878, 0.20487802)
-texture = ExtResource("2_a4yl1")
+texture = ExtResource("2_6vcpw")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1335053371]
 

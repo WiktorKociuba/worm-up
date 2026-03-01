@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cmvf8ej04qu51" path="res://scripts/Grafika_bez_nazwy (6).png" id="5_tefeu"]
 [ext_resource type="Script" path="res://scenes/sklep.gd" id="5_tipki"]
 [ext_resource type="Texture2D" uid="uid://n3bbj2g65am8" path="res://textures/Grafika_bez_nazwy (17).png" id="6_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://b4kdq8x3hlckv" path="res://scenes/wizard_npc.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://b4kdq8x3hlckv" path="res://scenes/bboy_npc.tscn" id="10_choun"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("2_0xm2m")
