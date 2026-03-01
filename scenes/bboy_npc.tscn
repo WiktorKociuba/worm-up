@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b4kdq8x3hlckv"]
+
+[ext_resource type="Script" uid="uid://dj2ml0hpdslc0" path="res://scripts/wizard_npc.gd" id="1_1wk7e"]
+[ext_resource type="Texture2D" uid="uid://bb01x730khlj8" path="res://textures/Grafika_bez_nazwy-1 (2).png" id="2_1wk7e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nku13"]
+size = Vector2(218, 483)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfvk8"]
+size = Vector2(111, 393)
+
+[node name="bboy_npc" type="CharacterBody2D" unique_id=241741361]
+script = ExtResource("1_1wk7e")
+dialogs = Array[String](["Would you be willing to help me?", "Of course!", "My birthday party is today but i don't have enough strawberries for my birthday cake. Could you go to the market and bring me some?", "Sure!", "Thank you so much, you're the best!! I need to bake the cake asap! Byee!!"])
+dialogsWho = Array[int]([2, 0, 2, 0, 2])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548199253]
+position = Vector2(4.5776367e-05, 0)
+scale = Vector2(0.204878, 0.20487802)
+texture = ExtResource("2_1wk7e")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1335053371]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1808987105]
+position = Vector2(11, 27.5)
+shape = SubResource("RectangleShape2D_nku13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2008547753]
+position = Vector2(12.5, 25.5)
+shape = SubResource("RectangleShape2D_sfvk8")
+disabled = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

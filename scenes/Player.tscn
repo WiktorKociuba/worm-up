@@ -16,21 +16,16 @@
 [ext_resource type="Texture2D" uid="uid://5w0cv6rw8ggn" path="res://textures/playerIcon.png" id="14_srp4u"]
 [ext_resource type="Texture2D" uid="uid://cxcsmun5ph46j" path="res://textures/wizardHead.png" id="15_jfpux"]
 [ext_resource type="Texture2D" uid="uid://cf57qwv0hd142" path="res://textures/dialogBox.png" id="16_61ith"]
+[ext_resource type="Texture2D" uid="uid://c8fvo6kcqcuw8" path="res://textures/bboyIcon.png" id="16_jfpux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkdrv"]
-size = Vector2(939, 211)
 
 [node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems", "npcIcons")]
 script = ExtResource("1_ij6vw")
 topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8")]
 bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]
-enableCamera = null
-canWalk = null
-"ifŻółty" = null
-npcIcons = [NodePath("UI/DialogUI/Icons/playerIcon"), NodePath("UI/DialogUI/Icons/wizardIcon")]
+npcIcons = [NodePath("UI/DialogUI/Icons/playerIcon"), NodePath("UI/DialogUI/Icons/wizardIcon"), NodePath("UI/DialogUI/Icons/bboyIcon")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944375968]
 position = Vector2(-4, -16)
@@ -107,17 +102,13 @@ position = Vector2(-1.9999924, 54)
 scale = Vector2(0.22199999, 0.22199999)
 texture = ExtResource("12_k85er")
 
-[node name="UI" type="Control" parent="." unique_id=1508684006]
+[node name="UI" type="Control" parent="." unique_id=1170132364]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
-[node name="DialogUI" type="Control" parent="UI" unique_id=128289441]
+[node name="DialogUI" type="Control" parent="UI" unique_id=1535081419]
 visible = false
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="Icons" type="Control" parent="UI/DialogUI" unique_id=1669334946]
 anchors_preset = 0
@@ -146,6 +137,16 @@ offset_bottom = 97.0
 texture = ExtResource("15_jfpux")
 expand_mode = 1
 
+[node name="bboyIcon" type="TextureRect" parent="UI/DialogUI/Icons" unique_id=1734184489]
+visible = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 98.0
+offset_bottom = 97.0
+texture = ExtResource("16_jfpux")
+expand_mode = 1
+
 [node name="DialogBox" type="TextureRect" parent="UI/DialogUI" unique_id=90363582]
 layout_mode = 0
 offset_left = -230.0
@@ -163,12 +164,7 @@ offset_right = 439.0
 offset_bottom = 164.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "dsadasdas"
-
-[node name="dialogArea2D" type="Area2D" parent="UI/DialogUI/DialogBox" unique_id=939789134]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/DialogUI/DialogBox/dialogArea2D" unique_id=1551117594]
-position = Vector2(459.5, 95.5)
-shape = SubResource("RectangleShape2D_lkdrv")
+autowrap_mode = 3
 
 [node name="TextureRect" type="TextureRect" parent="UI/DialogUI/DialogBox" unique_id=1971406642]
 layout_mode = 0
@@ -176,5 +172,3 @@ offset_left = 856.0
 offset_top = 19.0
 offset_right = 896.0
 offset_bottom = 59.0
-
-[connection signal="input_event" from="UI/DialogUI/DialogBox/dialogArea2D" to="." method="_on_dialog_area_2d_input_event"]
