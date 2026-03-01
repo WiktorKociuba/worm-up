@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://obpiiwk4veyn"]
+[gd_scene format=3 uid="uid://dgt0sw2sa66lc"]
 
-[ext_resource type="Script" uid="uid://dfsc4x4hsdoww" path="res://scenes/start.gd" id="1_bodal"]
+[ext_resource type="Script" path="res://scenes/start.gd" id="1_bodal"]
 [ext_resource type="Texture2D" uid="uid://di50qh7lw03kx" path="res://clothes/pxArt.png" id="2_bodal"]
 [ext_resource type="Texture2D" uid="uid://dgonfxpc567rn" path="res://images/unnamed (10).png" id="3_0auqf"]
 

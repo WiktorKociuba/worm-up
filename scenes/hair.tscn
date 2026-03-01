@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b4ku32lsky6wr" path="res://scenes/hair.gd" id="1_n7dj7"]
 [ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="2_n7dj7"]
 [ext_resource type="Texture2D" uid="uid://4xmfjr8dgb5w" path="res://images/unnamed (5).png" id="4_amsnx"]
+[ext_resource type="Texture2D" uid="uid://d3yjqbf3ecapm" path="res://textures/xicon.png" id="5_0onxh"]
 [ext_resource type="Texture2D" uid="uid://jaabejuw4wdk" path="res://textures/unnamed (1).png" id="5_xycch"]
 [ext_resource type="Texture2D" uid="uid://d1tn25kmdmkt4" path="res://textures/unnamed (2).png" id="6_jysk5"]
 [ext_resource type="Texture2D" uid="uid://bacwj5kchsw0k" path="res://textures/unnamed (3).png" id="7_rfgxo"]
@@ -40,18 +41,19 @@ offset_left = 351.0
 offset_top = 436.0
 offset_right = 577.0
 offset_bottom = 757.0
-item_count = 9
+item_count = 10
 max_columns = 2
 fixed_icon_size = Vector2i(100, 100)
-item_0/icon = ExtResource("5_xycch")
-item_1/icon = ExtResource("6_jysk5")
-item_2/icon = ExtResource("7_rfgxo")
-item_3/icon = ExtResource("8_538mh")
-item_4/icon = ExtResource("9_0onxh")
-item_5/icon = ExtResource("10_j0ymd")
-item_6/icon = ExtResource("11_538mh")
-item_7/icon = ExtResource("12_0onxh")
-item_8/icon = ExtResource("13_j0ymd")
+item_0/icon = ExtResource("5_0onxh")
+item_1/icon = ExtResource("5_xycch")
+item_2/icon = ExtResource("6_jysk5")
+item_3/icon = ExtResource("7_rfgxo")
+item_4/icon = ExtResource("8_538mh")
+item_5/icon = ExtResource("9_0onxh")
+item_6/icon = ExtResource("10_j0ymd")
+item_7/icon = ExtResource("11_538mh")
+item_8/icon = ExtResource("12_0onxh")
+item_9/icon = ExtResource("13_j0ymd")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="item_clicked" from="HeadItemList" to="." method="_on_head_item_list_item_clicked"]
