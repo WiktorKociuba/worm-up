@@ -86,4 +86,7 @@ func displayNewDialog(who: int,text: String, id: int):
 func _on_dialog_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
     if event is InputEventMouseButton and event.pressed:
         DialogController.emit_signal("nextDialog", dialogWho, dialogId)
-        
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
