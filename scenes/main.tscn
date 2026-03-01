@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://bnk7o3q7du1n0" path="res://textures/groundtxt.png" id="2_0xm2m"]
-[ext_resource type="Script" path="res://scenes/lumpeks.gd" id="2_o6xl0"]
+[ext_resource type="Script" uid="uid://dyjmp745wfe83" path="res://scenes/lumpeks.gd" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxxeoe4cfrtql" path="res://scenes/grzyb.tscn" id="3_sugp2"]
 [ext_resource type="Script" path="res://scenes/fryzjer.gd" id="4_85g3d"]
 [ext_resource type="Texture2D" uid="uid://cfbfm5h7hnl3h" path="res://scenes/Grafika_bez_nazwy (9).png" id="4_jyhfs"]
@@ -13,13 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://cicstbbpwyt3" path="res://textures/minimap_frame.png" id="11_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://jdiksf5eldt4" path="res://textures/minimap_frame_background.png" id="11_trceg"]
 [ext_resource type="Script" uid="uid://ovr02g0cs11y" path="res://scenes/minimap.gd" id="11_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://bbtuasinxk8qi" path="res://images/unnamed (20).png" id="12_trceg"]
 [ext_resource type="Texture2D" uid="uid://w2qe57cmus44" path="res://textures/unnamed (15).png" id="14_muem4"]
 [ext_resource type="Texture2D" uid="uid://c3nrr6ehy6os6" path="res://textures/unnamed (16).png" id="15_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://b8w8unx1m57so" path="res://textures/unnamed (17).png" id="16_0ld40"]
 [ext_resource type="Texture2D" uid="uid://d1q6g2c8rc7nl" path="res://textures/unnamed (18).png" id="17_gqmmt"]
-[ext_resource type="PackedScene" path="res://scenes/wiz_npc.tscn" id="10_choun"]
-[ext_resource type="Script" uid="uid://cngiwdjoxjkpc" path="res://scenes/koncert.gd" id="11_eb6dy"]
-[ext_resource type="Texture2D" uid="uid://bbtuasinxk8qi" path="res://images/unnamed (20).png" id="12_trceg"]
+[ext_resource type="Script" path="res://scenes/koncert.gd" id="18_0ld40"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("2_0xm2m")
@@ -143,6 +142,7 @@ size = Vector2(710, 558)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8y0u"]
 texture = ExtResource("11_trceg")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a8y0u"]
 size = Vector2(983.76807, 103.79541)
 
@@ -206,13 +206,8 @@ shape = SubResource("RectangleShape2D_85g3d")
 [node name="grzyb2" parent="." unique_id=688304257 instance=ExtResource("3_sugp2")]
 position = Vector2(-5314, -4690)
 
-[node name="Player" parent="." unique_id=239766747 node_paths=PackedStringArray("headItems", "neckItems", "topItems", "bottomItems", "npcIcons") instance=ExtResource("1_0xm2m")]
+[node name="Player" parent="." unique_id=239766747 instance=ExtResource("1_0xm2m")]
 position = Vector2(173, 129)
-headItems = []
-neckItems = []
-topItems = []
-bottomItems = []
-npcIcons = []
 
 [node name="wizardNPC" parent="." unique_id=241741361 instance=ExtResource("10_choun")]
 position = Vector2(415, -312)
@@ -275,8 +270,9 @@ z_index = -15
 position = Vector2(-4453, -5009)
 scale = Vector2(57.437527, 57.437527)
 texture = ExtResource("17_gqmmt")
+
 [node name="koncert" type="Node2D" parent="." unique_id=215219972]
-script = ExtResource("11_eb6dy")
+script = ExtResource("18_0ld40")
 
 [node name="Sprite2D" type="Sprite2D" parent="koncert" unique_id=1392001092]
 position = Vector2(-6454, 3618)
