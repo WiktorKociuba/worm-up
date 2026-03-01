@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnk7o3q7du1n0" path="res://textures/groundtxt.png" id="2_0xm2m"]
 [ext_resource type="Script" path="res://scenes/lumpeks.gd" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxxeoe4cfrtql" path="res://scenes/grzyb.tscn" id="3_sugp2"]
-[ext_resource type="Script" uid="uid://shah1b8op1a5" path="res://scenes/fryzjer.gd" id="4_85g3d"]
+[ext_resource type="Script" path="res://scenes/fryzjer.gd" id="4_85g3d"]
 [ext_resource type="Texture2D" uid="uid://cfbfm5h7hnl3h" path="res://scenes/Grafika_bez_nazwy (9).png" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cmvf8ej04qu51" path="res://scripts/Grafika_bez_nazwy (6).png" id="5_tefeu"]
 [ext_resource type="Script" path="res://scenes/sklep.gd" id="5_tipki"]
@@ -179,14 +179,14 @@ texture = ExtResource("6_o6xl0")
 position = Vector2(3492, -2703)
 shape = SubResource("RectangleShape2D_85g3d")
 
-[node name="Player" parent="." unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems") instance=ExtResource("1_0xm2m")]
-position = Vector2(100, 154)
-topItems = []
-bottomItems = []
-
 [node name="grzyb2" parent="." unique_id=688304257 instance=ExtResource("3_sugp2")]
 position = Vector2(-5314, -4690)
+
+[node name="Player" parent="." unique_id=239766747 instance=ExtResource("1_0xm2m")]
+position = Vector2(173, 129)
 
 [connection signal="body_entered" from="lumpeks/Area2D" to="lumpeks" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="fryzjer/Area2D" to="fryzjer" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="sklep/Area2D" to="sklep" method="_on_area_2d_body_entered"]
+
+[editable path="Player"]

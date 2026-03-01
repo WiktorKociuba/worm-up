@@ -106,3 +106,5 @@ icon = ExtResource("15_iui1w")
 [connection signal="item_clicked" from="HeadItemList" to="." method="_on_head_item_list_item_clicked"]
 [connection signal="item_clicked" from="ChooseClothesType" to="." method="_on_choose_clothes_type_item_clicked"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+
+[editable path="CharacterBody2D"]
