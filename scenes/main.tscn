@@ -211,6 +211,7 @@ shape = SubResource("RectangleShape2D_85g3d")
 
 [node name="grzyb2" parent="." unique_id=688304257 instance=ExtResource("3_sugp2")]
 position = Vector2(-5314, -4690)
+value = null
 
 [node name="Player" parent="." unique_id=239766747 instance=ExtResource("1_0xm2m")]
 position = Vector2(173, 129)

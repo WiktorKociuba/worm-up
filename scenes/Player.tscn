@@ -248,13 +248,9 @@ layout_mode = 0
 offset_right = 189.0
 offset_bottom = 319.0
 
-[node name="Label" type="Label" parent="UI/QuestUI/TextureRect/VBoxContainer" unique_id=1880674427]
-layout_mode = 2
-text = "Main quest: Help the worms get ready for the concert!"
-autowrap_mode = 3
-
 [node name="DialogUI" type="Control" parent="UI" unique_id=1535081419]
 visible = false
+z_index = 100
 anchors_preset = 0
 
 [node name="Icons" type="Control" parent="UI/DialogUI" unique_id=1669334946]
