@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c0us1p2ad5c2a"]
+
+[ext_resource type="Texture2D" uid="uid://b5xh2l3rq8cow" path="res://images/Grafika_bez_nazwy (5).png" id="1_46pwd"]
+[ext_resource type="Script" uid="uid://b4ku32lsky6wr" path="res://scenes/hair.gd" id="1_n7dj7"]
+[ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="2_n7dj7"]
+[ext_resource type="Texture2D" uid="uid://4xmfjr8dgb5w" path="res://images/unnamed (5).png" id="4_amsnx"]
+
+[node name="Hair" type="Node2D" unique_id=1970558721]
+script = ExtResource("1_n7dj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=284137331]
+position = Vector2(77.00001, 497.00006)
+scale = Vector2(0.9229768, 0.9229768)
+texture = ExtResource("1_46pwd")
+
+[node name="CharacterBody2D" parent="." unique_id=239766747 instance=ExtResource("2_n7dj7")]
+position = Vector2(-3.0517578e-05, 679)
+scale = Vector2(0.9277641, 0.92376244)
+enableCamera = false
+canWalk = false
+
+[node name="Button" type="Button" parent="." unique_id=1158410809]
+offset_left = -909.0
+offset_top = 194.0
+offset_right = -773.0
+offset_bottom = 330.0
+icon = ExtResource("4_amsnx")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

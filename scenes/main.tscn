@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnk7o3q7du1n0" path="res://textures/groundtxt.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://dyjmp745wfe83" path="res://scenes/lumpeks.gd" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxxeoe4cfrtql" path="res://scenes/grzyb.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://shah1b8op1a5" path="res://scenes/fryzjer.gd" id="4_85g3d"]
 [ext_resource type="Texture2D" uid="uid://cfbfm5h7hnl3h" path="res://scenes/Grafika_bez_nazwy (9).png" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cmvf8ej04qu51" path="res://scripts/Grafika_bez_nazwy (6).png" id="5_tefeu"]
 [ext_resource type="Script" uid="uid://ddn6i75f71fps" path="res://scenes/sklep.gd" id="5_tipki"]
@@ -123,6 +124,9 @@ sources/1 = SubResource("TileSetAtlasSource_0xm2m")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tipki"]
 size = Vector2(424, 278.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_choun"]
+size = Vector2(640, 443)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85g3d"]
 size = Vector2(710, 558)
 
@@ -148,11 +152,18 @@ position = Vector2(5011, 1576.75)
 shape = SubResource("RectangleShape2D_tipki")
 
 [node name="fryzjer" type="Node2D" parent="." unique_id=258099504]
+script = ExtResource("4_85g3d")
 
 [node name="Sprite2D" type="Sprite2D" parent="fryzjer" unique_id=2024135038]
-position = Vector2(-3490.0002, 1079.0001)
+position = Vector2(-3483.0002, 1083.0001)
 scale = Vector2(0.344307, 0.344307)
 texture = ExtResource("5_tefeu")
+
+[node name="Area2D" type="Area2D" parent="fryzjer" unique_id=334921214]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fryzjer/Area2D" unique_id=874532432]
+position = Vector2(-3477, 1035.5)
+shape = SubResource("RectangleShape2D_choun")
 
 [node name="sklep" type="Node2D" parent="." unique_id=1792984490]
 script = ExtResource("5_tipki")
@@ -177,4 +188,5 @@ bottomItems = []
 position = Vector2(-5314, -4690)
 
 [connection signal="body_entered" from="lumpeks/Area2D" to="lumpeks" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="fryzjer/Area2D" to="fryzjer" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="sklep/Area2D" to="sklep" method="_on_area_2d_body_entered"]

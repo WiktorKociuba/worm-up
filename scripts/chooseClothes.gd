@@ -36,3 +36,7 @@ func _on_choose_clothes_type_item_clicked(index: int, at_position: Vector2, mous
 	if index == 3:
 		$BottomItemList.visible = true
 	
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
