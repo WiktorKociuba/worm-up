@@ -1,8 +1,8 @@
 extends Node
-var birthdayQuestCompleted: bool = false
-var wizardQuestCompleted: bool = false
-var birthdayQuestActive: bool = false
-var wizardQuestActive: bool = false
+var questTexts = {
+    0: "",
+    1: ""
+}
 var isQuestCompleted = {
     0: false,
     1: false

@@ -10,7 +10,7 @@ func _ready() -> void:
     DialogController.nextDialog.connect(displayNextDialog)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-    if body is Player and not dialogDisplayed:
+    if body is Player and not dialogDisplayed and not QuestController.isQuestActive[questId]:
         DialogController.emit_signal("displayDialog",dialogsWho[0],dialogs[0],0)
         dialogDisplayed = true
     
