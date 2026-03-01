@@ -31,27 +31,27 @@ func _ready() -> void:
             addQuest(i,QuestController.questTexts[i])
     
 func setupClothes() -> void:
-	for item in headItems:
-		if item != null:
-			item.visible = false
-	for item in neckItems:
-		if item != null:
-			item.visible = false
-	for item in topItems:
-		if item != null:
-			item.visible = false
-	for item in bottomItems:
-		if item != null:
-			item.visible = false
-	if headItems.size() > Clothes.head and not Clothes.head == -1:
-		headItems[Clothes.head].visible = true
-	if neckItems.size() > Clothes.neck and not Clothes.neck == -1:
-		neckItems[Clothes.neck].visible = true
-	if topItems.size() > Clothes.top and not Clothes.top == -1:
-		topItems[Clothes.top].visible = true
-	if bottomItems.size() > Clothes.bottom and not Clothes.bottom == -1:
-		print(Clothes.bottom)
-		bottomItems[Clothes.bottom].visible = true
+    for item in headItems:
+        if item != null:
+            item.visible = false
+    for item in neckItems:
+        if item != null:
+            item.visible = false
+    for item in topItems:
+        if item != null:
+            item.visible = false
+    for item in bottomItems:
+        if item != null:
+            item.visible = false
+    if headItems.size() > Clothes.head and not Clothes.head == -1:
+        headItems[Clothes.head].visible = true
+    if neckItems.size() > Clothes.neck and not Clothes.neck == -1:
+        neckItems[Clothes.neck].visible = true
+    if topItems.size() > Clothes.top and not Clothes.top == -1:
+        topItems[Clothes.top].visible = true
+    if bottomItems.size() > Clothes.bottom and not Clothes.bottom == -1:
+        print(Clothes.bottom)
+        bottomItems[Clothes.bottom].visible = true
 
 func _physics_process(delta: float) -> void:
     if disableMovement:
