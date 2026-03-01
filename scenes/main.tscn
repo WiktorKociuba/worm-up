@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bnk7o3q7du1n0" path="res://textures/groundtxt.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://dyjmp745wfe83" path="res://scenes/lumpeks.gd" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://cxxeoe4cfrtql" path="res://scenes/grzyb.tscn" id="3_sugp2"]
-[ext_resource type="Script" path="res://scenes/fryzjer.gd" id="4_85g3d"]
+[ext_resource type="Script" uid="uid://shah1b8op1a5" path="res://scenes/fryzjer.gd" id="4_85g3d"]
 [ext_resource type="Texture2D" uid="uid://cfbfm5h7hnl3h" path="res://scenes/Grafika_bez_nazwy (9).png" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://cmvf8ej04qu51" path="res://scripts/Grafika_bez_nazwy (6).png" id="5_tefeu"]
-[ext_resource type="Script" path="res://scenes/sklep.gd" id="5_tipki"]
+[ext_resource type="Script" uid="uid://ddn6i75f71fps" path="res://scenes/sklep.gd" id="5_tipki"]
 [ext_resource type="Texture2D" uid="uid://n3bbj2g65am8" path="res://textures/Grafika_bez_nazwy (17).png" id="6_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://f2flsruve0yq" path="res://scenes/wiz_npc.tscn" id="10_choun"]
 [ext_resource type="Texture2D" uid="uid://cicstbbpwyt3" path="res://textures/minimap_frame.png" id="11_eb6dy"]
@@ -286,9 +286,17 @@ position = Vector2(-6458.5, 3540.0461)
 scale = Vector2(0.5316298, -3.1802235)
 shape = SubResource("RectangleShape2D_a8y0u")
 
+[node name="Timer" type="Timer" parent="." unique_id=76403876]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="lumpeks/Area2D" to="lumpeks" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="fryzjer/Area2D" to="fryzjer" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="sklep/Area2D" to="sklep" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="koncert/Area2D" to="koncert" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="lumpeks" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="fryzjer" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="sklep" method="_on_timer_timeout"]
 
 [editable path="Player"]
