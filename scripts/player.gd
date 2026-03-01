@@ -14,7 +14,7 @@ var dialogWho: int
 var disableMovement: bool = false
 var quests = {}
 
-const SPEED = 400.0
+const SPEED = 4000.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
@@ -88,7 +88,7 @@ func displayNewDialog(who: int,text: String, id: int):
         disableMovement = false
         dialogId = id
         return
-    if id == 0:
+    if id == 0 or id == -2:
         disableMovement = true
         $UI/DialogUI.visible = true
     $UI/DialogUI/DialogBox/DialogText.text = text
