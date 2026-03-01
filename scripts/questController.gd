@@ -20,6 +20,7 @@ var isQuestActive = {
     3: false,
     4: false
 }
+var questsCompleted: bool = false
 #ids
 #0-bboy
 #1-wizzard

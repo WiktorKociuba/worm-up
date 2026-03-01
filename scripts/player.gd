@@ -19,7 +19,7 @@ var gorgid: int = -1
 var disableMovement: bool = false
 var quests = {}
 
-const SPEED = 4000.0
+const SPEED = 600.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
@@ -98,45 +98,50 @@ func _physics_process(delta: float) -> void:
 
 
 func _process(delta: float) -> void:
-	if ifŻółty:
-		$"żółty".visible = true
-		$normalny.visible = false
-	else:
-		$"żółty".visible = false
-		$normalny.visible = true
-	for i in range(5):
-		if QuestController.isQuestCompleted[i] == false:
-			return
-	print("completed")
-	for i in range(5):
-		quests[i].queue_free()
-	addQuest(0,"Find the stage!")
+    if ifŻółty:
+        $"żółty".visible = true
+        $normalny.visible = false
+    else:
+        $"żółty".visible = false
+        $normalny.visible = true
+    if QuestController.questsCompleted:
+        return
+    for i in range(5):
+        if i == 2:
+            continue
+        if QuestController.isQuestCompleted[i] == false:
+            return
+    QuestController.deleteQuest.emit(2)
+    addQuest(0,"Find the stage!")
+    QuestController.questsCompleted = true
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 
 func displayNewDialog(who: int,text: String, id: int, orgid:int):
-	print(text)
-	gorgid = orgid
-	if id == -1:
-		$UI/DialogUI.visible = false
-		gorgid = -1
-		disableMovement = false
-		dialogId = id
-		dialogWho = -1
-		return
-	if id == 0 or id == -2:
-		disableMovement = true
-		$UI/DialogUI.visible = true
-	$UI/DialogUI/DialogBox/DialogText.text = text
-	for icon in npcIcons:
-		icon.visible = false
-	npcIcons[who].visible = true
-	dialogWho = who
-	dialogId = id
-	
+    print(text)
+    gorgid = orgid
+    if id == -1:
+        $UI/DialogUI.visible = false
+        gorgid = -1
+        disableMovement = false
+        dialogId = id
+        dialogWho = -1
+        return
+    if id == 0 or id == -2:
+        disableMovement = true
+        $UI/DialogUI.visible = true
+    $UI/DialogUI/DialogBox/DialogText.text = text
+    for icon in npcIcons:
+        icon.visible = false
+    npcIcons[who].visible = true
+    dialogWho = who
+    dialogId = id
+    
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.pressed and dialogWho > -1:
-		DialogController.emit_signal("nextDialog", dialogWho, dialogId, gorgid)
+    if event is InputEventMouseButton and event.pressed and dialogWho > -1:
+        DialogController.emit_signal("nextDialog", dialogWho, dialogId, gorgid)
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
@@ -150,18 +155,11 @@ func addQuest(id: int, text: String):
 	QuestController.isQuestActive[id] = true
 
 func removeQuest(id:int):
-	if QuestController.isQuestCompleted[id] == true:
-		return
-	QuestController.isQuestCompleted[id] = true
-	quests[id].queue_free()
-	for i in range(5):
-		if i == 2:
-			continue
-		if QuestController.isQuestCompleted[i] == false:
-			return
-	quests[2].queue_free()
-	addQuest(0,"Find the stage!")
-
+    if QuestController.isQuestCompleted[id] == true:
+        return
+    QuestController.isQuestCompleted[id] = true
+    quests[id].queue_free()
+    
 func updateEq():
 	$UI/EqUI/Strawberry/StrawLabel.text = str(Eq.strawberies)
 	$UI/EqUI/Shroom/ShroomLabel.text = str(Eq.shrooms)
