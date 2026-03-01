@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cm0xt00w2f4n0"]
+
+[ext_resource type="Texture2D" uid="uid://bfxght183nfjn" path="res://images/Grafika_bez_nazwy (39).png" id="1_f8oqq"]
+
+[node name="Koncert" type="Node2D" unique_id=1192550345]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1692122920]
+position = Vector2(954, 630.00006)
+scale = Vector2(0.8645175, 0.80918473)
+texture = ExtResource("1_f8oqq")
