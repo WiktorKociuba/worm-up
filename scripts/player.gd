@@ -69,7 +69,19 @@ func _physics_process(delta: float) -> void:
         velocity.y = directionY * SPEED
     else:
         velocity.y = move_toward(velocity.y, 0, SPEED)
-
+    if velocity.length() > 0:
+        var flip = velocity.x < 0
+        $normalny.flip_h = flip
+        $"żółty".flip_h = flip
+        for child in neckItems:
+            if child != null:
+                child.flip_h = flip
+        for child in topItems:
+            if child != null:
+                child.flip_h = flip
+        for child in bottomItems:
+            if child != null:
+                child.flip_h = flip
     move_and_slide()
 
 func _process(delta: float) -> void:
