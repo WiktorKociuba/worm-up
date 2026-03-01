@@ -18,18 +18,18 @@ const SPEED = 4000.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
-    setupClothes()
-    if not enableCamera:
-        $Camera2D.visible = false
-    Clothes.clothesChanged.connect(setupClothes)
-    DialogController.displayDialog.connect(displayNewDialog)
-    QuestController.activateQuest.connect(addQuest)
-    QuestController.deleteQuest.connect(removeQuest)
-    Eq.eqChange.connect(updateEq)
-    for i in range(2):
-        if QuestController.isQuestActive[i]:
-            addQuest(i,QuestController.questTexts[i])
-    
+	setupClothes()
+	if not enableCamera:
+		$Camera2D.visible = false
+	Clothes.clothesChanged.connect(setupClothes)
+	DialogController.displayDialog.connect(displayNewDialog)
+	QuestController.activateQuest.connect(addQuest)
+	QuestController.deleteQuest.connect(removeQuest)
+	Eq.eqChange.connect(updateEq)
+	for i in range(2):
+		if QuestController.isQuestActive[i]:
+			addQuest(i,QuestController.questTexts[i])
+	
 func setupClothes() -> void:
     for item in headItems:
         if item != null:
@@ -54,33 +54,33 @@ func setupClothes() -> void:
         bottomItems[Clothes.bottom].visible = true
 
 func _physics_process(delta: float) -> void:
-    if disableMovement:
-        return
-    if not canWalk:
-        return
-    var direction := Input.get_axis("left", "right")
-    if direction:
-        velocity.x = direction * SPEED
-    else:
-        velocity.x = move_toward(velocity.x, 0, SPEED)
-    var directionY := Input.get_axis("up","down")
-    if directionY:
-        velocity.y = directionY * SPEED
-    else:
-        velocity.y = move_toward(velocity.y, 0, SPEED)
+	if disableMovement:
+		return
+	if not canWalk:
+		return
+	var direction := Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	var directionY := Input.get_axis("up","down")
+	if directionY:
+		velocity.y = directionY * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 
-    move_and_slide()
+	move_and_slide()
 
 func _process(delta: float) -> void:
-    if ifŻółty:
-        $"żółty".visible = true
-        $normalny.visible = false
-    else:
-        $"żółty".visible = false
-        $normalny.visible = true
+	if ifŻółty:
+		$"żółty".visible = true
+		$normalny.visible = false
+	else:
+		$"żółty".visible = false
+		$normalny.visible = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 func displayNewDialog(who: int,text: String, id: int):
     if id == -1:
@@ -106,17 +106,17 @@ func _on_button_pressed() -> void:
     get_tree().change_scene_to_file("res://scenes/main.tscn")
     
 func addQuest(id: int, text: String):
-    var questLabel = Label.new()
-    QuestController.questTexts[id] = text
-    questLabel.text = text
-    $UI/QuestUI/TextureRect/VBoxContainer.add_child(questLabel)
-    quests[id] = questLabel
-    QuestController.isQuestActive[id] = true
+	var questLabel = Label.new()
+	QuestController.questTexts[id] = text
+	questLabel.text = text
+	$UI/QuestUI/TextureRect/VBoxContainer.add_child(questLabel)
+	quests[id] = questLabel
+	QuestController.isQuestActive[id] = true
 
 func removeQuest(id:int):
-    QuestController.isQuestCompleted[id] = true
-    quests[id].queue_free()
+	QuestController.isQuestCompleted[id] = true
+	quests[id].queue_free()
 
 func updateEq():
-    $UI/EqUI/Strawberry/StrawLabel.text = str(Eq.strawberies)
-    $UI/EqUI/Shroom/ShroomLabel.text = str(Eq.shrooms)
+	$UI/EqUI/Strawberry/StrawLabel.text = str(Eq.strawberies)
+	$UI/EqUI/Shroom/ShroomLabel.text = str(Eq.shrooms)
