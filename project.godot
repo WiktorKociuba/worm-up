@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Worm Up"
-run/main_scene="uid://obpiiwk4veyn"
+run/main_scene="res://scenes/start.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://textures/icon.svg"
 
@@ -20,7 +20,7 @@ config/icon="res://textures/icon.svg"
 Clothes="*uid://b2nmnxr87tmas"
 GameController="*uid://dm2bqibd1y0s7"
 EventController="*res://event_controller.gd"
-DialogController="*uid://bdxpj3kgbnjts"
+DialogController="*res://scripts/dialogController.gd"
 
 [display]
 

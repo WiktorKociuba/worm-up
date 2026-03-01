@@ -217,7 +217,6 @@ scale = Vector2(0.28461108, 0.28461108)
 texture = ExtResource("28_agngo")
 
 [node name="UI" type="Control" parent="." unique_id=1170132364]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 
