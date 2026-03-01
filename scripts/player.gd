@@ -18,14 +18,14 @@ const SPEED = 400.0
 const JUMP_VELOCITY = -400.0
 
 func _ready() -> void:
-    setupClothes()
-    if not enableCamera:
-        $Camera2D.visible = false
-    Clothes.clothesChanged.connect(setupClothes)
-    DialogController.displayDialog.connect(displayNewDialog)
-    QuestController.activateQuest.connect(addQuest)
-    QuestController.deleteQuest.connect(removeQuest)
-    
+	setupClothes()
+	if not enableCamera:
+		$Camera2D.visible = false
+	Clothes.clothesChanged.connect(setupClothes)
+	DialogController.displayDialog.connect(displayNewDialog)
+	QuestController.activateQuest.connect(addQuest)
+	QuestController.deleteQuest.connect(removeQuest)
+	
 func setupClothes() -> void:
 	for item in headItems:
 		if item != null:
@@ -79,35 +79,41 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 
 func displayNewDialog(who: int,text: String, id: int):
-    if id == -1:
-        $UI/DialogUI.visible = false
-        disableMovement = false
-        dialogId = id
-        return
-    if id == 0:
-        disableMovement = true
-        $UI/DialogUI.visible = true
-    $UI/DialogUI/DialogBox/DialogText.text = text
-    for icon in npcIcons:
-        icon.visible = false
-    npcIcons[who].visible = true
-    dialogWho = who
-    dialogId = id
-    
+	if id == -1:
+		$UI/DialogUI.visible = false
+		disableMovement = false
+		dialogId = id
+		return
+	if id == 0:
+		disableMovement = true
+		$UI/DialogUI.visible = true
+	$UI/DialogUI/DialogBox/DialogText.text = text
+	for icon in npcIcons:
+		icon.visible = false
+	npcIcons[who].visible = true
+	dialogWho = who
+	dialogId = id
+	
 func _unhandled_input(event: InputEvent) -> void:
-    if event is InputEventMouseButton and event.pressed:
-        DialogController.emit_signal("nextDialog", dialogWho, dialogId)
+	if event is InputEventMouseButton and event.pressed:
+		DialogController.emit_signal("nextDialog", dialogWho, dialogId)
 
 func _on_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://scenes/main.tscn")
-    
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	
 func addQuest(id: int, text: String):
-    var questLabel = Label.new()
-    questLabel.text = text
-    $UI/QuestUI/TextureRect/VBoxContainer.add_child(questLabel)
-    quests[id] = questLabel
-    QuestController.isQuestActive[id] = true
+	var questLabel = Label.new()
+	questLabel.text = text
+	$UI/QuestUI/TextureRect/VBoxContainer.add_child(questLabel)
+	quests[id] = questLabel
+	QuestController.isQuestActive[id] = true
 
 func removeQuest(id:int):
-    QuestController.isQuestCompleted[id] = true
-    quests[id].queue_free()
+	QuestController.isQuestCompleted[id] = true
+	quests[id].queue_free()
+
+var game_data = { }
+
+
+
+ 
