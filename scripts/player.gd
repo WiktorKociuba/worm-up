@@ -36,13 +36,13 @@ func setupClothes() -> void:
     for item in bottomItems:
         if item != null:
             item.visible = false
-    if headItems.size() > Clothes.head:
+    if headItems.size() > Clothes.head and not Clothes.head == -1:
         headItems[Clothes.head].visible = true
-    if neckItems.size() > Clothes.neck:
+    if neckItems.size() > Clothes.neck and not Clothes.neck == -1:
         neckItems[Clothes.neck].visible = true
-    if topItems.size() > Clothes.top:
+    if topItems.size() > Clothes.top and not Clothes.top == -1:
         topItems[Clothes.top].visible = true
-    if bottomItems.size() > Clothes.bottom:
+    if bottomItems.size() > Clothes.bottom and not Clothes.bottom == -1:
         print(Clothes.bottom)
         bottomItems[Clothes.bottom].visible = true
 

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_rr0sa"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="4_sp7kv"]
 [ext_resource type="Texture2D" uid="uid://dekihuefd86y8" path="res://textures/Grafika_bez_nazwy (16).png" id="4_xgcoa"]
+[ext_resource type="Texture2D" uid="uid://d3yjqbf3ecapm" path="res://textures/xicon.png" id="5_cpot5"]
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_sp7kv"]
 [ext_resource type="Texture2D" uid="uid://c3obqmkej71ka" path="res://clothes/top/top4.png" id="6_b1k6g"]
 [ext_resource type="Texture2D" uid="uid://di7hdbk5n00se" path="res://clothes/top/top5.png" id="7_uq810"]
@@ -48,40 +49,42 @@ enableCamera = false
 canWalk = false
 
 [node name="BottomItemList" type="ItemList" parent="." unique_id=1510440075]
-visible = false
 offset_left = 230.00003
 offset_top = -188.0
 offset_right = 456.00003
 offset_bottom = 133.0
-item_count = 4
+item_count = 5
 max_columns = 2
 fixed_icon_size = Vector2i(100, 100)
-item_0/icon = ExtResource("3_rr0sa")
-item_1/icon = ExtResource("4_sp7kv")
-item_2/icon = ExtResource("7_vafrr")
-item_3/icon = ExtResource("8_cpot5")
+item_0/icon = ExtResource("5_cpot5")
+item_1/icon = ExtResource("3_rr0sa")
+item_2/icon = ExtResource("4_sp7kv")
+item_3/icon = ExtResource("7_vafrr")
+item_4/icon = ExtResource("8_cpot5")
 
 [node name="TopItemList" type="ItemList" parent="." unique_id=440612935]
+visible = false
 offset_left = 230.0
 offset_top = -188.0
 offset_right = 456.0
 offset_bottom = 133.0
-item_count = 13
+item_count = 14
 max_columns = 3
 fixed_icon_size = Vector2i(100, 100)
-item_0/icon = ExtResource("3_3uy7g")
-item_1/icon = ExtResource("4_rr0sa")
-item_2/icon = ExtResource("5_sp7kv")
-item_3/icon = ExtResource("6_b1k6g")
-item_4/icon = ExtResource("7_uq810")
-item_5/icon = ExtResource("8_xgcoa")
-item_6/icon = ExtResource("9_veeku")
-item_7/icon = ExtResource("10_c1gm6")
-item_8/icon = ExtResource("15_d4c1f")
-item_9/icon = ExtResource("16_gvrrx")
-item_10/icon = ExtResource("17_d7pn0")
-item_11/icon = ExtResource("18_egx6f")
-item_12/icon = ExtResource("19_vafrr")
+item_0/icon = ExtResource("5_cpot5")
+item_1/icon = ExtResource("3_3uy7g")
+item_2/icon = ExtResource("4_rr0sa")
+item_3/icon = ExtResource("5_sp7kv")
+item_4/icon = ExtResource("6_b1k6g")
+item_5/icon = ExtResource("7_uq810")
+item_6/icon = ExtResource("8_xgcoa")
+item_7/icon = ExtResource("9_veeku")
+item_8/icon = ExtResource("10_c1gm6")
+item_9/icon = ExtResource("15_d4c1f")
+item_10/icon = ExtResource("16_gvrrx")
+item_11/icon = ExtResource("17_d7pn0")
+item_12/icon = ExtResource("18_egx6f")
+item_13/icon = ExtResource("19_vafrr")
 
 [node name="NeckItemList" type="ItemList" parent="." unique_id=1188148195]
 visible = false
@@ -89,10 +92,11 @@ offset_left = 230.0
 offset_top = -188.0
 offset_right = 456.0
 offset_bottom = 133.0
-item_count = 2
+item_count = 3
 fixed_icon_size = Vector2i(100, 100)
-item_0/icon = ExtResource("22_j0vfu")
-item_1/icon = ExtResource("23_o4ufu")
+item_0/icon = ExtResource("5_cpot5")
+item_1/icon = ExtResource("22_j0vfu")
+item_2/icon = ExtResource("23_o4ufu")
 
 [node name="ChooseClothesType" type="ItemList" parent="." unique_id=255274559]
 offset_left = 230.00003
