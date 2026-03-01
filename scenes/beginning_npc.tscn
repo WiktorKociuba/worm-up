@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bfkdv02tdwrrg"]
+
+[ext_resource type="Script" uid="uid://dj2ml0hpdslc0" path="res://scripts/wizard_npc.gd" id="1_uduwh"]
+[ext_resource type="Texture2D" uid="uid://dhwygsi4kdmdg" path="res://textures/Grafika_bez_nazwy (38).png" id="2_uduwh"]
+[ext_resource type="Texture2D" uid="uid://c8fvo6kcqcuw8" path="res://textures/bboyIcon.png" id="3_d71ai"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nku13"]
+size = Vector2(218, 483)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfvk8"]
+size = Vector2(111, 393)
+
+[node name="beginning_npc" type="CharacterBody2D" unique_id=241741361]
+visibility_layer = 2
+script = ExtResource("1_uduwh")
+dialogs = Array[String](["Heyyy, so my crew needs help some help before the concert.", "But I don't really know where they are right now.", "Find them and they will tell you what to do", "You also need to prepare yourself for the concet.", "When you complete all of that, find the stage!", "Good luck!"])
+dialogsWho = Array[int]([3, 3, 3, 3, 3, 3])
+questId = 2
+questText = "Help crew and dress yourself"
+whoIsThis = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548199253]
+position = Vector2(4.5776367e-05, 0)
+scale = Vector2(0.204878, 0.20487802)
+texture = ExtResource("2_uduwh")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1335053371]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1808987105]
+position = Vector2(11, 27.5)
+shape = SubResource("RectangleShape2D_nku13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2008547753]
+position = Vector2(12.5, 25.5)
+shape = SubResource("RectangleShape2D_sfvk8")
+disabled = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=934261324]
+visibility_layer = 2
+z_index = -15
+texture = ExtResource("3_d71ai")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

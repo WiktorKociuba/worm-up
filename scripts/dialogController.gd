@@ -4,5 +4,5 @@ extends Node
 # 1-wizard
 # 2-bboy
 
-signal displayDialog(who: int,text: String, id: int)
-signal nextDialog(who: int, id:int)
+signal displayDialog(who: int,text: String, id: int,orgid:int)
+signal nextDialog(who: int, id:int,orgid:int)
