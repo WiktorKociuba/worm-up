@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://obpiiwk4veyn"]
+
+[ext_resource type="Script" uid="uid://dfsc4x4hsdoww" path="res://scenes/start.gd" id="1_bodal"]
+[ext_resource type="Texture2D" uid="uid://di50qh7lw03kx" path="res://clothes/pxArt.png" id="2_bodal"]
+[ext_resource type="Texture2D" uid="uid://dgonfxpc567rn" path="res://images/unnamed (10).png" id="3_0auqf"]
+
+[node name="Start" type="Node2D" unique_id=1296364760]
+script = ExtResource("1_bodal")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1207120198]
+position = Vector2(960, 537)
+texture = ExtResource("2_bodal")
+
+[node name="Button" type="Button" parent="." unique_id=1310580160]
+offset_left = 840.0
+offset_top = 658.0
+offset_right = 1104.0
+offset_bottom = 794.0
+icon = ExtResource("3_0auqf")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
