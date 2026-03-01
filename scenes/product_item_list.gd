@@ -5,3 +5,6 @@ func _on_item_clicked(index: int, at_position: Vector2, mouse_button_index: int)
         $"../JP2".visible = true
         $"../JP2/Area2D/Kremówka".visible = true
         visible = false
+    elif index == 0:
+        Eq.strawberies+=1
+        Eq.eqChange.emit()

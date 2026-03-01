@@ -36,4 +36,7 @@ func displayNextDialog(who: int, id: int, orgid: int):
         else:
             DialogController.emit_signal("displayDialog",-1,"",-1,orgid)
             QuestController.emit_signal("activateQuest",questId,questText)
+            if whoIsThis == 3:
+                QuestController.emit_signal("activateQuest",3,"Go to the trendsetter")
+                QuestController.emit_signal("activateQuest",4,"Go to the hairdresser")
         
