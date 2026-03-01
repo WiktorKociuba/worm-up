@@ -4,12 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://c7k3wkaxp0tco" path="res://textures/Grafika_bez_nazwy (1).png" id="2_ij6vw"]
 [ext_resource type="Texture2D" uid="uid://de2418r1d6ii8" path="res://textures/Grafika_bez_nazwy (25).png" id="2_lkdrv"]
 [ext_resource type="Texture2D" uid="uid://c0xtswq8nu4eg" path="res://clothes/top/top1.png" id="3_1kp85"]
+[ext_resource type="Texture2D" uid="uid://jaabejuw4wdk" path="res://textures/unnamed (1).png" id="4_61ith"]
 [ext_resource type="Texture2D" uid="uid://d0jgqeej543sf" path="res://clothes/top/top2.png" id="4_qnedo"]
+[ext_resource type="Texture2D" uid="uid://d1tn25kmdmkt4" path="res://textures/unnamed (2).png" id="5_sfy4j"]
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_wyqjk"]
+[ext_resource type="Texture2D" uid="uid://bacwj5kchsw0k" path="res://textures/unnamed (3).png" id="6_gv3ic"]
 [ext_resource type="Texture2D" uid="uid://c3obqmkej71ka" path="res://clothes/top/top4.png" id="6_k85er"]
+[ext_resource type="Texture2D" uid="uid://ck0vofnr5k624" path="res://textures/unnamed (11).png" id="7_6e537"]
 [ext_resource type="Texture2D" uid="uid://di7hdbk5n00se" path="res://clothes/top/top5.png" id="7_ebjds"]
+[ext_resource type="Texture2D" uid="uid://biscgnulmck6f" path="res://textures/unnamed (12).png" id="8_p07f3"]
 [ext_resource type="Texture2D" uid="uid://c8owsf4oeii1r" path="res://clothes/top/top6.png" id="8_y1dt5"]
 [ext_resource type="Texture2D" uid="uid://b68xcblln4ool" path="res://clothes/top/top7.png" id="9_au0nh"]
+[ext_resource type="Texture2D" uid="uid://cccrg5l0wi6lb" path="res://textures/unnamed (13).png" id="9_viqgg"]
 [ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_76bt2"]
 [ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="11_wyqjk"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="12_k85er"]
@@ -21,8 +27,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
 
-[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems", "npcIcons")]
+[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("headItems", "topItems", "bottomItems", "npcIcons")]
 script = ExtResource("1_ij6vw")
+headItems = [NodePath("headItems/head1"), NodePath("headItems/head2"), NodePath("headItems/head3"), NodePath("headItems/head4"), NodePath("headItems/head5"), NodePath("headItems/head6")]
 topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8")]
 bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]
 npcIcons = [NodePath("UI/DialogUI/Icons/playerIcon"), NodePath("UI/DialogUI/Icons/wizardIcon"), NodePath("UI/DialogUI/Icons/bboyIcon")]
@@ -45,6 +52,36 @@ texture = ExtResource("2_ij6vw")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=677570470]
 
 [node name="headItems" type="Node2D" parent="." unique_id=2064575868]
+
+[node name="head1" type="Sprite2D" parent="headItems" unique_id=2116635595]
+position = Vector2(-4.000001, -198)
+scale = Vector2(0.45312503, 0.45312503)
+texture = ExtResource("4_61ith")
+
+[node name="head2" type="Sprite2D" parent="headItems" unique_id=838864012]
+position = Vector2(7, -180)
+scale = Vector2(0.5234375, 0.5234375)
+texture = ExtResource("5_sfy4j")
+
+[node name="head3" type="Sprite2D" parent="headItems" unique_id=1985026861]
+position = Vector2(6.9999995, -191.00002)
+scale = Vector2(0.38281253, 0.38281253)
+texture = ExtResource("6_gv3ic")
+
+[node name="head4" type="Sprite2D" parent="headItems" unique_id=938017487]
+position = Vector2(9, -185)
+scale = Vector2(0.38281253, 0.38281253)
+texture = ExtResource("7_6e537")
+
+[node name="head5" type="Sprite2D" parent="headItems" unique_id=388056104]
+position = Vector2(8, -179.00002)
+scale = Vector2(0.5683594, 0.5683594)
+texture = ExtResource("8_p07f3")
+
+[node name="head6" type="Sprite2D" parent="headItems" unique_id=449642736]
+position = Vector2(7, -181)
+scale = Vector2(0.48828125, 0.48828125)
+texture = ExtResource("9_viqgg")
 
 [node name="neckItems" type="Node2D" parent="." unique_id=1168495543]
 

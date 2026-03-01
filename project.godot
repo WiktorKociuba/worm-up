@@ -20,7 +20,7 @@ config/icon="res://textures/icon.svg"
 Clothes="*uid://b2nmnxr87tmas"
 GameController="*uid://dm2bqibd1y0s7"
 EventController="*res://event_controller.gd"
-DialogController="*res://scripts/dialogController.gd"
+DialogController="*uid://bdxpj3kgbnjts"
 
 [display]
 

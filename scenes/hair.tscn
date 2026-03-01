@@ -1,9 +1,15 @@
-[gd_scene format=3 uid="uid://c0us1p2ad5c2a"]
+[gd_scene format=3 uid="uid://cl423jarh80el"]
 
 [ext_resource type="Texture2D" uid="uid://b5xh2l3rq8cow" path="res://images/Grafika_bez_nazwy (5).png" id="1_46pwd"]
 [ext_resource type="Script" uid="uid://b4ku32lsky6wr" path="res://scenes/hair.gd" id="1_n7dj7"]
 [ext_resource type="PackedScene" uid="uid://dnj1j2lvwgnkw" path="res://scenes/Player.tscn" id="2_n7dj7"]
 [ext_resource type="Texture2D" uid="uid://4xmfjr8dgb5w" path="res://images/unnamed (5).png" id="4_amsnx"]
+[ext_resource type="Texture2D" uid="uid://jaabejuw4wdk" path="res://textures/unnamed (1).png" id="5_xycch"]
+[ext_resource type="Texture2D" uid="uid://d1tn25kmdmkt4" path="res://textures/unnamed (2).png" id="6_jysk5"]
+[ext_resource type="Texture2D" uid="uid://bacwj5kchsw0k" path="res://textures/unnamed (3).png" id="7_rfgxo"]
+[ext_resource type="Texture2D" uid="uid://ck0vofnr5k624" path="res://textures/unnamed (11).png" id="8_538mh"]
+[ext_resource type="Texture2D" uid="uid://biscgnulmck6f" path="res://textures/unnamed (12).png" id="9_0onxh"]
+[ext_resource type="Texture2D" uid="uid://cccrg5l0wi6lb" path="res://textures/unnamed (13).png" id="10_j0ymd"]
 
 [node name="Hair" type="Node2D" unique_id=1970558721]
 script = ExtResource("1_n7dj7")
@@ -26,4 +32,20 @@ offset_right = -773.0
 offset_bottom = 330.0
 icon = ExtResource("4_amsnx")
 
+[node name="HeadItemList" type="ItemList" parent="." unique_id=261283662]
+offset_left = 351.0
+offset_top = 436.0
+offset_right = 577.0
+offset_bottom = 757.0
+item_count = 6
+max_columns = 2
+fixed_icon_size = Vector2i(100, 100)
+item_0/icon = ExtResource("5_xycch")
+item_1/icon = ExtResource("6_jysk5")
+item_2/icon = ExtResource("7_rfgxo")
+item_3/icon = ExtResource("8_538mh")
+item_4/icon = ExtResource("9_0onxh")
+item_5/icon = ExtResource("10_j0ymd")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="item_clicked" from="HeadItemList" to="." method="_on_head_item_list_item_clicked"]

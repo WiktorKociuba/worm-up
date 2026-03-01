@@ -33,10 +33,13 @@ texture = ExtResource("4_xgcoa")
 position = Vector2(-62, -118)
 scale = Vector2(1.0287161, 1.1257882)
 
-[node name="CharacterBody2D" parent="." unique_id=239766747 instance=ExtResource("2_kft4c")]
+[node name="CharacterBody2D" parent="." unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems", "npcIcons") instance=ExtResource("2_kft4c")]
 position = Vector2(-221, 126)
+topItems = []
+bottomItems = []
 enableCamera = false
 canWalk = false
+npcIcons = []
 
 [node name="BottomItemList" type="ItemList" parent="." unique_id=1510440075]
 visible = false
@@ -74,13 +77,6 @@ offset_top = -188.0
 offset_right = 456.0
 offset_bottom = 133.0
 
-[node name="HeadItemList" type="ItemList" parent="." unique_id=1826214435]
-visible = false
-offset_left = 230.0
-offset_top = -188.0
-offset_right = 456.0
-offset_bottom = 133.0
-
 [node name="ChooseClothesType" type="ItemList" parent="." unique_id=255274559]
 offset_left = 230.00003
 offset_top = -228.0
@@ -103,7 +99,6 @@ icon = ExtResource("15_iui1w")
 [connection signal="item_clicked" from="BottomItemList" to="." method="_on_bottom_item_list_item_clicked"]
 [connection signal="item_clicked" from="TopItemList" to="." method="_on_top_item_list_item_clicked"]
 [connection signal="item_clicked" from="NeckItemList" to="." method="_on_neck_item_list_item_clicked"]
-[connection signal="item_clicked" from="HeadItemList" to="." method="_on_head_item_list_item_clicked"]
 [connection signal="item_clicked" from="ChooseClothesType" to="." method="_on_choose_clothes_type_item_clicked"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 

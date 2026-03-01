@@ -3,9 +3,7 @@ extends Node2D
 
 
 
-func _on_head_item_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
-    Clothes.head = index
-    Clothes.clothesChanged.emit()
+
 
 
 func _on_neck_item_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
