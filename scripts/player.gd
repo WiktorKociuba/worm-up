@@ -50,33 +50,33 @@ func setupClothes() -> void:
         bottomItems[Clothes.bottom].visible = true
 
 func _physics_process(delta: float) -> void:
-    if disableMovement:
-        return
-    if not canWalk:
-        return
-    var direction := Input.get_axis("left", "right")
-    if direction:
-        velocity.x = direction * SPEED
-    else:
-        velocity.x = move_toward(velocity.x, 0, SPEED)
-    var directionY := Input.get_axis("up","down")
-    if directionY:
-        velocity.y = directionY * SPEED
-    else:
-        velocity.y = move_toward(velocity.y, 0, SPEED)
+	if disableMovement:
+		return
+	if not canWalk:
+		return
+	var direction := Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	var directionY := Input.get_axis("up","down")
+	if directionY:
+		velocity.y = directionY * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 
-    move_and_slide()
+	move_and_slide()
 
 func _process(delta: float) -> void:
-    if ifŻółty:
-        $"żółty".visible = true
-        $normalny.visible = false
-    else:
-        $"żółty".visible = false
-        $normalny.visible = true
+	if ifŻółty:
+		$"żółty".visible = true
+		$normalny.visible = false
+	else:
+		$"żółty".visible = false
+		$normalny.visible = true
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 func displayNewDialog(who: int,text: String, id: int):
     if id == -1:

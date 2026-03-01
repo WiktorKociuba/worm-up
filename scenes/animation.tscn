@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://cqgoed1yo65d1"]
+
+[ext_resource type="Texture2D" uid="uid://djs84qd2nfdve" path="res://images/Grafika_bez_nazwy (32).png" id="1_u0f4s"]
+[ext_resource type="Texture2D" uid="uid://bbaqlmei05lrx" path="res://images/Grafika_bez_nazwy (35).png" id="2_r1y6c"]
+
+[sub_resource type="Animation" id="Animation_u0f4s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("worm:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(973.00006, 532)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("worm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.011126544]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tlo:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8790244, 0.8060975)]
+}
+
+[sub_resource type="Animation" id="Animation_jta6c"]
+resource_name = "new_animation"
+length = 3.3966
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("worm:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.23333333, 0.7659, 1.5318, 1.998),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(973.00006, 532), Vector2(973, 300), Vector2(973, 300), Vector2(973, 800)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("worm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.76666665, 1.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.011126544, 3.1520646291017598]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tlo:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.2654, 1.5318),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.8790244, 0.8060975), Vector2(1.97, 1.806)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p5qov"]
+_data = {
+&"RESET": SubResource("Animation_u0f4s"),
+&"new_animation": SubResource("Animation_jta6c")
+}
+
+[node name="Animation" type="Node2D" unique_id=72780858]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1717736544]
+libraries/ = SubResource("AnimationLibrary_p5qov")
+
+[node name="tlo" type="Sprite2D" parent="." unique_id=313068444]
+position = Vector2(1009, 599)
+scale = Vector2(0.8790244, 0.8060975)
+texture = ExtResource("1_u0f4s")
+
+[node name="worm" type="Sprite2D" parent="." unique_id=2116989531]
+position = Vector2(973.00006, 532)
+rotation = 0.011126544
+scale = Vector2(0.4485484, 0.40703058)
+texture = ExtResource("2_r1y6c")
