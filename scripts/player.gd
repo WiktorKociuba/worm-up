@@ -108,28 +108,28 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 
 func displayNewDialog(who: int,text: String, id: int, orgid:int):
-    print(text)
-    gorgid = orgid
-    if id == -1:
-        $UI/DialogUI.visible = false
-        gorgid = -1
-        disableMovement = false
-        dialogId = id
-        dialogWho = -1
-        return
-    if id == 0 or id == -2:
-        disableMovement = true
-        $UI/DialogUI.visible = true
-    $UI/DialogUI/DialogBox/DialogText.text = text
-    for icon in npcIcons:
-        icon.visible = false
-    npcIcons[who].visible = true
-    dialogWho = who
-    dialogId = id
-    
+	print(text)
+	gorgid = orgid
+	if id == -1:
+		$UI/DialogUI.visible = false
+		gorgid = -1
+		disableMovement = false
+		dialogId = id
+		dialogWho = -1
+		return
+	if id == 0 or id == -2:
+		disableMovement = true
+		$UI/DialogUI.visible = true
+	$UI/DialogUI/DialogBox/DialogText.text = text
+	for icon in npcIcons:
+		icon.visible = false
+	npcIcons[who].visible = true
+	dialogWho = who
+	dialogId = id
+	
 func _unhandled_input(event: InputEvent) -> void:
-    if event is InputEventMouseButton and event.pressed and dialogWho > -1:
-        DialogController.emit_signal("nextDialog", dialogWho, dialogId, gorgid)
+	if event is InputEventMouseButton and event.pressed and dialogWho > -1:
+		DialogController.emit_signal("nextDialog", dialogWho, dialogId, gorgid)
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
