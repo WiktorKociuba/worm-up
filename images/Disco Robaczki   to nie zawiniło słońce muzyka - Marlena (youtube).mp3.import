@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6w7wrymt3gko"
+path="res://.godot/imported/Disco Robaczki   to nie zawiniło słońce muzyka - Marlena (youtube).mp3-2dc0f16110ff5f856f8d7a723b8ab53a.mp3str"
+
+[deps]
+
+source_file="res://images/Disco Robaczki   to nie zawiniło słońce muzyka - Marlena (youtube).mp3"
+dest_files=["res://.godot/imported/Disco Robaczki   to nie zawiniło słońce muzyka - Marlena (youtube).mp3-2dc0f16110ff5f856f8d7a723b8ab53a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
