@@ -104,13 +104,18 @@ func _process(delta: float) -> void:
     else:
         $"żółty".visible = false
         $normalny.visible = true
+    if QuestController.questsCompleted:
+        return
     for i in range(5):
+        if i == 2:
+            continue
         if QuestController.isQuestCompleted[i] == false:
             return
-    print("completed")
-    for i in range(5):
-        quests[i].queue_free()
+    QuestController.deleteQuest.emit(2)
     addQuest(0,"Find the stage!")
+    QuestController.questsCompleted = true
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
     pass # Replace with function body.
 
@@ -154,14 +159,7 @@ func removeQuest(id:int):
         return
     QuestController.isQuestCompleted[id] = true
     quests[id].queue_free()
-    for i in range(5):
-        if i == 2:
-            continue
-        if QuestController.isQuestCompleted[i] == false:
-            return
-    quests[2].queue_free()
-    addQuest(0,"Find the stage!")
-
+    
 func updateEq():
     $UI/EqUI/Strawberry/StrawLabel.text = str(Eq.strawberies)
     $UI/EqUI/Shroom/ShroomLabel.text = str(Eq.shrooms)

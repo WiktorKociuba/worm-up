@@ -381,3 +381,11 @@ position = Vector2(-173, -129)
 stream = ExtResource("39_gu4mg")
 volume_db = 20.0
 script = ExtResource("40_tk6la")
+
+[node name="Label" type="Label" parent="." unique_id=1978224268]
+visible = false
+offset_left = -223.0
+offset_top = -398.0
+offset_right = 223.0
+offset_bottom = -375.0
+text = "You have to complete all quests before the concert starts!"

@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c3nrr6ehy6os6" path="res://textures/unnamed (16).png" id="15_dp3eg"]
 [ext_resource type="Texture2D" uid="uid://b8w8unx1m57so" path="res://textures/unnamed (17).png" id="16_0ld40"]
 [ext_resource type="Texture2D" uid="uid://d1q6g2c8rc7nl" path="res://textures/unnamed (18).png" id="17_gqmmt"]
-[ext_resource type="Script" path="res://scenes/koncert.gd" id="18_0ld40"]
+[ext_resource type="Script" uid="uid://cngiwdjoxjkpc" path="res://scenes/koncert.gd" id="18_0ld40"]
 [ext_resource type="PackedScene" uid="uid://b4kdq8x3hlckv" path="res://scenes/bboy_npc.tscn" id="22_jscy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
