@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="11_wyqjk"]
 [ext_resource type="Texture2D" uid="uid://bjdvxtj0yq3l0" path="res://textures/pxArt (17).png" id="12_b1r6t"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="12_k85er"]
-[ext_resource type="Texture2D" uid="uid://5w0cv6rw8ggn" path="res://textures/playerIcon.png" id="14_srp4u"]
+[ext_resource type="Texture2D" uid="uid://cqi02mlky5asm" path="res://textures/playerIcon.png" id="14_srp4u"]
 [ext_resource type="Texture2D" uid="uid://cxcsmun5ph46j" path="res://textures/wizardHead.png" id="15_jfpux"]
 [ext_resource type="Texture2D" uid="uid://cf57qwv0hd142" path="res://textures/dialogBox.png" id="16_61ith"]
 [ext_resource type="Texture2D" uid="uid://c8fvo6kcqcuw8" path="res://textures/bboyIcon.png" id="16_jfpux"]
@@ -38,6 +38,8 @@
 [ext_resource type="Texture2D" uid="uid://cs3k6v8scwif0" path="res://textures/IMG_20260301_121814.png" id="36_m4as6"]
 [ext_resource type="Texture2D" uid="uid://cmtnb8xfntfa7" path="res://textures/Grafika_bez_nazwy (20).png" id="37_c0asu"]
 [ext_resource type="Texture2D" uid="uid://gdxwsof0emxy" path="res://Grafika_bez_nazwy (12).png" id="38_fq1a3"]
+[ext_resource type="AudioStream" uid="uid://cpas4xny8bf51" path="res://images/footsteps dirt running.wav" id="39_gu4mg"]
+[ext_resource type="Script" uid="uid://debbfae3pgr34" path="res://scenes/audio_stream_player_2d.gd" id="40_tk6la"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
@@ -360,3 +362,9 @@ text = "0"
 visibility_layer = 2
 z_index = -7
 texture = ExtResource("14_srp4u")
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="." unique_id=1729918512]
+position = Vector2(-173, -129)
+stream = ExtResource("39_gu4mg")
+volume_db = 20.0
+script = ExtResource("40_tk6la")
