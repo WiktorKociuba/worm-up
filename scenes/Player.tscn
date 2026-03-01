@@ -17,21 +17,34 @@
 [ext_resource type="Texture2D" uid="uid://b68xcblln4ool" path="res://clothes/top/top7.png" id="9_au0nh"]
 [ext_resource type="Texture2D" uid="uid://cccrg5l0wi6lb" path="res://textures/unnamed (13).png" id="9_viqgg"]
 [ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_76bt2"]
+[ext_resource type="Texture2D" uid="uid://b0tce6wjk6bhj" path="res://textures/pxArt (18).png" id="10_axnmu"]
+[ext_resource type="Texture2D" uid="uid://b7n6lyyu75mni" path="res://textures/pxArt (15).png" id="10_qmt83"]
+[ext_resource type="Texture2D" uid="uid://cxp452ks4wc2m" path="res://textures/pxArt (19).png" id="11_fvsjc"]
+[ext_resource type="Texture2D" uid="uid://dqnb1i61fq24g" path="res://textures/pxArt (16).png" id="11_m4as6"]
 [ext_resource type="Texture2D" uid="uid://b2ftkcwhphdb6" path="res://clothes/bottom/bottom1.png" id="11_wyqjk"]
+[ext_resource type="Texture2D" uid="uid://bjdvxtj0yq3l0" path="res://textures/pxArt (17).png" id="12_b1r6t"]
 [ext_resource type="Texture2D" uid="uid://cpr17s041rhqa" path="res://clothes/bottom/bottom2.png" id="12_k85er"]
 [ext_resource type="Texture2D" uid="uid://5w0cv6rw8ggn" path="res://textures/playerIcon.png" id="14_srp4u"]
 [ext_resource type="Texture2D" uid="uid://cxcsmun5ph46j" path="res://textures/wizardHead.png" id="15_jfpux"]
 [ext_resource type="Texture2D" uid="uid://cf57qwv0hd142" path="res://textures/dialogBox.png" id="16_61ith"]
 [ext_resource type="Texture2D" uid="uid://c8fvo6kcqcuw8" path="res://textures/bboyIcon.png" id="16_jfpux"]
+[ext_resource type="Texture2D" uid="uid://cl5k3c3t15en2" path="res://textures/pxArt (22).png" id="18_1jpwa"]
+[ext_resource type="Texture2D" uid="uid://jcn5dq7i5dak" path="res://textures/pxArt (23).png" id="19_pfeki"]
+[ext_resource type="Texture2D" uid="uid://b3w2s8iu15y1o" path="res://textures/pxArt (24).png" id="20_axnmu"]
+[ext_resource type="Texture2D" uid="uid://drpr7iepx4qff" path="res://textures/pxArt (25).png" id="21_fvsjc"]
+[ext_resource type="Texture2D" uid="uid://bph20vr5t7n7l" path="res://textures/pxArt (26).png" id="22_hxdpb"]
+[ext_resource type="Texture2D" uid="uid://cbxcub4vr1ub5" path="res://textures/pxArt (20).png" id="27_hxdpb"]
+[ext_resource type="Texture2D" uid="uid://bg5euov4ui3rq" path="res://textures/pxArt (21).png" id="28_agngo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_44cfe"]
 size = Vector2(117, 372)
 
-[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("headItems", "topItems", "bottomItems", "npcIcons")]
+[node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("headItems", "neckItems", "topItems", "bottomItems", "npcIcons")]
 script = ExtResource("1_ij6vw")
-headItems = [NodePath("headItems/head1"), NodePath("headItems/head2"), NodePath("headItems/head3"), NodePath("headItems/head4"), NodePath("headItems/head5"), NodePath("headItems/head6")]
-topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8")]
-bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2")]
+headItems = [NodePath("headItems/head1"), NodePath("headItems/head2"), NodePath("headItems/head3"), NodePath("headItems/head4"), NodePath("headItems/head5"), NodePath("headItems/head6"), NodePath("headItems/head7"), NodePath("headItems/head8"), NodePath("headItems/head9")]
+neckItems = [NodePath("neckItems/neck1"), NodePath("neckItems/neck2")]
+topItems = [NodePath("topItems/top1"), NodePath("topItems/Top2"), NodePath("topItems/Top3"), NodePath("topItems/Top4"), NodePath("topItems/Top5"), NodePath("topItems/Top6"), NodePath("topItems/Top7"), NodePath("topItems/Top8"), NodePath("topItems/Top9"), NodePath("topItems/Top10"), NodePath("topItems/Top11"), NodePath("topItems/Top12"), NodePath("topItems/Top13")]
+bottomItems = [NodePath("bottomItems/Bottom1"), NodePath("bottomItems/Bottom2"), NodePath("bottomItems/Bottom3"), NodePath("bottomItems/Bottom4")]
 npcIcons = [NodePath("UI/DialogUI/Icons/playerIcon"), NodePath("UI/DialogUI/Icons/wizardIcon"), NodePath("UI/DialogUI/Icons/bboyIcon")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1944375968]
@@ -83,7 +96,35 @@ position = Vector2(7, -181)
 scale = Vector2(0.48828125, 0.48828125)
 texture = ExtResource("9_viqgg")
 
+[node name="head7" type="Sprite2D" parent="headItems" unique_id=1783104315]
+position = Vector2(5, -204)
+rotation = -0.42258725
+scale = Vector2(0.06664303, 0.06664302)
+texture = ExtResource("10_qmt83")
+
+[node name="head8" type="Sprite2D" parent="headItems" unique_id=1336345031]
+position = Vector2(-4, -203)
+rotation = -0.7810728
+scale = Vector2(0.09787196, 0.09787196)
+texture = ExtResource("11_m4as6")
+
+[node name="head9" type="Sprite2D" parent="headItems" unique_id=333641557]
+position = Vector2(-7.6293945e-06, -200)
+rotation = -0.29895362
+scale = Vector2(0.05607031, 0.05607031)
+texture = ExtResource("12_b1r6t")
+
 [node name="neckItems" type="Node2D" parent="." unique_id=1168495543]
+
+[node name="neck1" type="Sprite2D" parent="neckItems" unique_id=2094815034]
+position = Vector2(-1.9617963, -146.78125)
+scale = Vector2(0.06319441, 0.06319441)
+texture = ExtResource("10_axnmu")
+
+[node name="neck2" type="Sprite2D" parent="neckItems" unique_id=1490034765]
+position = Vector2(-1, -138)
+scale = Vector2(0.06319441, 0.06319441)
+texture = ExtResource("11_fvsjc")
 
 [node name="topItems" type="Node2D" parent="." unique_id=980187481]
 
@@ -127,6 +168,31 @@ position = Vector2(-1, -39)
 scale = Vector2(0.30700004, 0.30700004)
 texture = ExtResource("10_76bt2")
 
+[node name="Top9" type="Sprite2D" parent="topItems" unique_id=762073294]
+position = Vector2(0, -4)
+scale = Vector2(0.5195, 0.5195)
+texture = ExtResource("18_1jpwa")
+
+[node name="Top10" type="Sprite2D" parent="topItems" unique_id=1566158565]
+position = Vector2(7, 8)
+scale = Vector2(0.53687185, 0.53687185)
+texture = ExtResource("19_pfeki")
+
+[node name="Top11" type="Sprite2D" parent="topItems" unique_id=1410076813]
+position = Vector2(-1.9999962, 15.000002)
+scale = Vector2(0.5817353, 0.5817353)
+texture = ExtResource("20_axnmu")
+
+[node name="Top12" type="Sprite2D" parent="topItems" unique_id=2060975053]
+position = Vector2(-1.0000038, -65)
+scale = Vector2(0.38506407, 0.3850641)
+texture = ExtResource("21_fvsjc")
+
+[node name="Top13" type="Sprite2D" parent="topItems" unique_id=1962763863]
+position = Vector2(1, 42.000004)
+scale = Vector2(0.5209242, 0.5209242)
+texture = ExtResource("22_hxdpb")
+
 [node name="bottomItems" type="Node2D" parent="." unique_id=202959923]
 
 [node name="Bottom1" type="Sprite2D" parent="bottomItems" unique_id=1807511814]
@@ -139,7 +205,19 @@ position = Vector2(-1.9999924, 54)
 scale = Vector2(0.22199999, 0.22199999)
 texture = ExtResource("12_k85er")
 
+[node name="Bottom3" type="Sprite2D" parent="bottomItems" unique_id=2096377790]
+visible = false
+position = Vector2(-9, 92)
+scale = Vector2(0.3234711, 0.32347113)
+texture = ExtResource("27_hxdpb")
+
+[node name="Bottom4" type="Sprite2D" parent="bottomItems" unique_id=1674503462]
+position = Vector2(-2, 67)
+scale = Vector2(0.28461108, 0.28461108)
+texture = ExtResource("28_agngo")
+
 [node name="UI" type="Control" parent="." unique_id=1170132364]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 

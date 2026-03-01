@@ -10,11 +10,20 @@
 [ext_resource type="Texture2D" uid="uid://cei1fmyuvnip" path="res://clothes/top/top3.png" id="5_sp7kv"]
 [ext_resource type="Texture2D" uid="uid://c3obqmkej71ka" path="res://clothes/top/top4.png" id="6_b1k6g"]
 [ext_resource type="Texture2D" uid="uid://di7hdbk5n00se" path="res://clothes/top/top5.png" id="7_uq810"]
+[ext_resource type="Texture2D" uid="uid://cbxcub4vr1ub5" path="res://textures/pxArt (20).png" id="7_vafrr"]
+[ext_resource type="Texture2D" uid="uid://bg5euov4ui3rq" path="res://textures/pxArt (21).png" id="8_cpot5"]
 [ext_resource type="Texture2D" uid="uid://c8owsf4oeii1r" path="res://clothes/top/top6.png" id="8_xgcoa"]
 [ext_resource type="Texture2D" uid="uid://b68xcblln4ool" path="res://clothes/top/top7.png" id="9_veeku"]
 [ext_resource type="Texture2D" uid="uid://ckgnrrdgcfvo2" path="res://clothes/top/top8.png" id="10_c1gm6"]
 [ext_resource type="Texture2D" uid="uid://lwiyow43owf5" path="res://textures/Grafika_bez_nazwy (8).png" id="13_sp7kv"]
+[ext_resource type="Texture2D" uid="uid://cl5k3c3t15en2" path="res://textures/pxArt (22).png" id="15_d4c1f"]
 [ext_resource type="Texture2D" uid="uid://4xmfjr8dgb5w" path="res://images/unnamed (5).png" id="15_iui1w"]
+[ext_resource type="Texture2D" uid="uid://jcn5dq7i5dak" path="res://textures/pxArt (23).png" id="16_gvrrx"]
+[ext_resource type="Texture2D" uid="uid://b3w2s8iu15y1o" path="res://textures/pxArt (24).png" id="17_d7pn0"]
+[ext_resource type="Texture2D" uid="uid://drpr7iepx4qff" path="res://textures/pxArt (25).png" id="18_egx6f"]
+[ext_resource type="Texture2D" uid="uid://bph20vr5t7n7l" path="res://textures/pxArt (26).png" id="19_vafrr"]
+[ext_resource type="Texture2D" uid="uid://b0tce6wjk6bhj" path="res://textures/pxArt (18).png" id="22_j0vfu"]
+[ext_resource type="Texture2D" uid="uid://cxp452ks4wc2m" path="res://textures/pxArt (19).png" id="23_o4ufu"]
 
 [node name="wardrobe" type="Node2D" unique_id=1271117142]
 script = ExtResource("2_g2r1m")
@@ -33,13 +42,10 @@ texture = ExtResource("4_xgcoa")
 position = Vector2(-62, -118)
 scale = Vector2(1.0287161, 1.1257882)
 
-[node name="CharacterBody2D" parent="." unique_id=239766747 node_paths=PackedStringArray("topItems", "bottomItems", "npcIcons") instance=ExtResource("2_kft4c")]
+[node name="CharacterBody2D" parent="." unique_id=239766747 instance=ExtResource("2_kft4c")]
 position = Vector2(-221, 126)
-topItems = []
-bottomItems = []
 enableCamera = false
 canWalk = false
-npcIcons = []
 
 [node name="BottomItemList" type="ItemList" parent="." unique_id=1510440075]
 visible = false
@@ -47,18 +53,20 @@ offset_left = 230.00003
 offset_top = -188.0
 offset_right = 456.00003
 offset_bottom = 133.0
-item_count = 2
+item_count = 4
 max_columns = 2
 fixed_icon_size = Vector2i(100, 100)
 item_0/icon = ExtResource("3_rr0sa")
 item_1/icon = ExtResource("4_sp7kv")
+item_2/icon = ExtResource("7_vafrr")
+item_3/icon = ExtResource("8_cpot5")
 
 [node name="TopItemList" type="ItemList" parent="." unique_id=440612935]
 offset_left = 230.0
 offset_top = -188.0
 offset_right = 456.0
 offset_bottom = 133.0
-item_count = 8
+item_count = 13
 max_columns = 3
 fixed_icon_size = Vector2i(100, 100)
 item_0/icon = ExtResource("3_3uy7g")
@@ -69,6 +77,11 @@ item_4/icon = ExtResource("7_uq810")
 item_5/icon = ExtResource("8_xgcoa")
 item_6/icon = ExtResource("9_veeku")
 item_7/icon = ExtResource("10_c1gm6")
+item_8/icon = ExtResource("15_d4c1f")
+item_9/icon = ExtResource("16_gvrrx")
+item_10/icon = ExtResource("17_d7pn0")
+item_11/icon = ExtResource("18_egx6f")
+item_12/icon = ExtResource("19_vafrr")
 
 [node name="NeckItemList" type="ItemList" parent="." unique_id=1188148195]
 visible = false
@@ -76,18 +89,23 @@ offset_left = 230.0
 offset_top = -188.0
 offset_right = 456.0
 offset_bottom = 133.0
+item_count = 2
+fixed_icon_size = Vector2i(100, 100)
+item_0/icon = ExtResource("22_j0vfu")
+item_1/icon = ExtResource("23_o4ufu")
 
 [node name="ChooseClothesType" type="ItemList" parent="." unique_id=255274559]
 offset_left = 230.00003
 offset_top = -228.0
 offset_right = 456.00003
 offset_bottom = -188.0
-item_count = 4
+auto_width = true
+item_count = 3
 max_columns = 4
-item_0/text = "Head"
-item_1/text = "Neck"
-item_2/text = "Top"
-item_3/text = "Bottom"
+same_column_width = true
+item_0/text = "Neck"
+item_1/text = "Top"
+item_2/text = "Bottom"
 
 [node name="Button" type="Button" parent="." unique_id=1104783414]
 offset_left = -981.0

@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://ck0vofnr5k624" path="res://textures/unnamed (11).png" id="8_538mh"]
 [ext_resource type="Texture2D" uid="uid://biscgnulmck6f" path="res://textures/unnamed (12).png" id="9_0onxh"]
 [ext_resource type="Texture2D" uid="uid://cccrg5l0wi6lb" path="res://textures/unnamed (13).png" id="10_j0ymd"]
+[ext_resource type="Texture2D" uid="uid://b7n6lyyu75mni" path="res://textures/pxArt (15).png" id="11_538mh"]
+[ext_resource type="Texture2D" uid="uid://dqnb1i61fq24g" path="res://textures/pxArt (16).png" id="12_0onxh"]
+[ext_resource type="Texture2D" uid="uid://bjdvxtj0yq3l0" path="res://textures/pxArt (17).png" id="13_j0ymd"]
 
 [node name="Hair" type="Node2D" unique_id=1970558721]
 script = ExtResource("1_n7dj7")
@@ -37,7 +40,7 @@ offset_left = 351.0
 offset_top = 436.0
 offset_right = 577.0
 offset_bottom = 757.0
-item_count = 6
+item_count = 9
 max_columns = 2
 fixed_icon_size = Vector2i(100, 100)
 item_0/icon = ExtResource("5_xycch")
@@ -46,6 +49,9 @@ item_2/icon = ExtResource("7_rfgxo")
 item_3/icon = ExtResource("8_538mh")
 item_4/icon = ExtResource("9_0onxh")
 item_5/icon = ExtResource("10_j0ymd")
+item_6/icon = ExtResource("11_538mh")
+item_7/icon = ExtResource("12_0onxh")
+item_8/icon = ExtResource("13_j0ymd")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="item_clicked" from="HeadItemList" to="." method="_on_head_item_list_item_clicked"]
