@@ -43,6 +43,7 @@
 size = Vector2(117, 372)
 
 [node name="Player" type="CharacterBody2D" unique_id=239766747 node_paths=PackedStringArray("headItems", "neckItems", "topItems", "bottomItems", "npcIcons")]
+visibility_layer = 2
 script = ExtResource("1_ij6vw")
 headItems = [NodePath("headItems/head1"), NodePath("headItems/head2"), NodePath("headItems/head3"), NodePath("headItems/head4"), NodePath("headItems/head5"), NodePath("headItems/head6"), NodePath("headItems/head7"), NodePath("headItems/head8"), NodePath("headItems/head9")]
 neckItems = [NodePath("neckItems/neck1"), NodePath("neckItems/neck2")]
@@ -316,8 +317,10 @@ offset_bottom = 59.0
 
 [node name="EqUI" type="Control" parent="UI" unique_id=913132424]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1717.0
+offset_top = 347.0
+offset_right = 1757.0
+offset_bottom = 387.0
 
 [node name="Strawberry" type="TextureRect" parent="UI/EqUI" unique_id=1774956940]
 layout_mode = 0
@@ -352,3 +355,8 @@ offset_top = 52.0
 offset_right = 78.0
 offset_bottom = 75.0
 text = "0"
+
+[node name="minimapIcon" type="Sprite2D" parent="." unique_id=738782208]
+visibility_layer = 2
+z_index = -7
+texture = ExtResource("14_srp4u")
