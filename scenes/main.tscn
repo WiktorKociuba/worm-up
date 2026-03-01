@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ddn6i75f71fps" path="res://scenes/sklep.gd" id="5_tipki"]
 [ext_resource type="Texture2D" uid="uid://n3bbj2g65am8" path="res://textures/Grafika_bez_nazwy (17).png" id="6_o6xl0"]
 [ext_resource type="PackedScene" path="res://scenes/bboy_npc.tscn" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://f2flsruve0yq" path="res://scenes/wiz_npc.tscn" id="10_choun"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("2_0xm2m")
@@ -187,7 +188,7 @@ position = Vector2(-5314, -4690)
 position = Vector2(173, 129)
 
 [node name="wizardNPC" parent="." unique_id=241741361 instance=ExtResource("10_choun")]
-position = Vector2(464, -399)
+position = Vector2(415, -312)
 
 [connection signal="body_entered" from="lumpeks/Area2D" to="lumpeks" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="fryzjer/Area2D" to="fryzjer" method="_on_area_2d_body_entered"]

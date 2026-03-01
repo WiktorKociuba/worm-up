@@ -21,6 +21,7 @@ Clothes="*uid://b2nmnxr87tmas"
 GameController="*uid://dm2bqibd1y0s7"
 EventController="*res://event_controller.gd"
 DialogController="*res://scripts/dialogController.gd"
+QuestController="*res://scripts/questController.gd"
 
 [display]
 

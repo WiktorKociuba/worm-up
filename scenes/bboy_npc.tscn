@@ -13,6 +13,8 @@ size = Vector2(111, 393)
 script = ExtResource("1_1wk7e")
 dialogs = Array[String](["Would you be willing to help me?", "Of course!", "My birthday party is today but i don't have enough strawberries for my birthday cake. Could you go to the market and bring me some?", "Sure!", "Thank you so much, you're the best!! I need to bake the cake asap! Byee!!"])
 dialogsWho = Array[int]([2, 0, 2, 0, 2])
+questText = "Get a strawberry for the Birthday Worm"
+whoIsThis = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548199253]
 position = Vector2(4.5776367e-05, 0)
