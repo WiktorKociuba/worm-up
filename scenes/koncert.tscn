@@ -38,3 +38,10 @@ texture = ExtResource("5_gm3mr")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2126753742]
 stream = ExtResource("6_m55es")
+
+[node name="Label" type="Label" parent="." unique_id=1005716213]
+offset_left = 862.0
+offset_top = 115.0
+offset_right = 1072.0
+offset_bottom = 168.0
+text = "Thanks for playing!"
