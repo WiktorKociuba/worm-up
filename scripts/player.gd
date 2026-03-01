@@ -59,38 +59,38 @@ func setupClothes() -> void:
 		bottomItems[Clothes.bottom].visible = true
 
 func _physics_process(delta: float) -> void:
-    if Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right") or Input.is_action_just_pressed("up") and not $sfx.playing:
+	if Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right") or Input.is_action_just_pressed("up") and not $sfx.playing:
 		$sfx.play()
 	if Input.is_action_just_released("down") or Input.is_action_just_released("left") or Input.is_action_just_released("right") or Input.is_action_just_released("up") and $sfx.playing:
 		$sfx.stop()
-    if disableMovement:
-        return
-    if not canWalk:
-        return
-    var direction := Input.get_axis("left", "right")
-    if direction:
-        velocity.x = direction * SPEED
-    else:
-        velocity.x = move_toward(velocity.x, 0, SPEED)
-    var directionY := Input.get_axis("up","down")
-    if directionY:
-        velocity.y = directionY * SPEED
-    else:
-        velocity.y = move_toward(velocity.y, 0, SPEED)
-    if velocity.length() > 0:
-        var flip = velocity.x < 0
-        $normalny.flip_h = flip
-        $"żółty".flip_h = flip
-        for child in neckItems:
-            if child != null:
-                child.flip_h = flip
-        for child in topItems:
-            if child != null:
-                child.flip_h = flip
-        for child in bottomItems:
-            if child != null:
-                child.flip_h = flip
-    move_and_slide()
+	if disableMovement:
+		return
+	if not canWalk:
+		return
+	var direction := Input.get_axis("left", "right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	var directionY := Input.get_axis("up","down")
+	if directionY:
+		velocity.y = directionY * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+	if velocity.length() > 0:
+		var flip = velocity.x < 0
+		$normalny.flip_h = flip
+		$"żółty".flip_h = flip
+		for child in neckItems:
+			if child != null:
+				child.flip_h = flip
+		for child in topItems:
+			if child != null:
+				child.flip_h = flip
+		for child in bottomItems:
+			if child != null:
+				child.flip_h = flip
+	move_and_slide()
 
 
 func _process(delta: float) -> void:
